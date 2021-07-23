@@ -1,0 +1,25 @@
+.partner{
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.partner .partnerTitle{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #253B59;
+    font-family: Montserrat;
+}
+
+.partnerImage{
+    padding: 0 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.partnerImage img{
+    width: 100%;
+    height: 100%;
+}

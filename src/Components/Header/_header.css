@@ -1,0 +1,38 @@
+.logo{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.telNumber{
+    position: relative;
+}
+.telNumber .telNumberPosition {
+    position: absolute;
+    right: 120px;
+    top: 50px;
+    font-size: 17px;
+    margin-bottom: 17px;
+}
+
+.headerN{
+    display: flex;
+    flex-direction: column;
+}
+
+.menuList{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #253B59;
+}
+.headerN ul > li{
+    color: #253B59 !important;
+}

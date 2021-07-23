@@ -1,0 +1,16 @@
+.footerSection{
+    background: #679ED8;
+    height: 200px;
+    width: 100%;
+    color: white;
+}
+
+.footerCol {
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+}

@@ -1,0 +1,44 @@
+.contactS{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #679ED8;
+    height: 400px;
+    text-align: center;
+    width: 100%;
+}
+
+.contactS .contactTitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    color: #FFFFFF;
+}
+
+.contactPhone{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px
+}
+.contactTels{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.contactEmail{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}

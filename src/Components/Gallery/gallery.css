@@ -1,0 +1,25 @@
+.galleryContain {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.galleryContain .galleryTitle{
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 88px;
+    color: #253B59;
+    margin-bottom: 103px;
+}
+
+.gallery{
+    width: 298px;
+    height: 317px;
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,28 @@
+.about{
+    margin-top: 50px;
+}
+ .aboutTitle{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #253B59;
+     font-family: Montserrat;
+
+}
+ .aboutImg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+ .aboutText{
+    padding: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #033F7F;
+}

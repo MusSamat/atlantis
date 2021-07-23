@@ -84,11 +84,7 @@
 
 
 /*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
-@media only screen and (min-width: 60px) and (max-width: 599px){
-    .image-carousel-div{
-        height: 339px;
-    }
-}
+
 @media only screen and (min-width: 280px) and (max-width: 599px) {
     .cart-content-right {
         padding-bottom: 5px;
@@ -132,8 +128,7 @@
     }
 }
 @media (min-width: 1200px) and (max-width: 1500px) {
-    .image-carousel-div{height: 600px;}
-    .banner-main .carousel-caption span {font-size: 40px; line-height: 43px; padding-bottom: 10px;}
+     .banner-main .carousel-caption span {font-size: 40px; line-height: 43px; padding-bottom: 10px;}
    .banner-main .carousel-caption h1 {font-size: 45px; padding-bottom: 20px; line-height: 32px;}
    .banner-main .carousel-caption p {font-size: 19px; padding: 5px 0px 17px 0px; line-height: 25px;}
     .banner-main .carousel-caption .buynow {width: 174px; padding: 7px 0px;}
@@ -143,9 +138,8 @@
     .container {
     max-width: 980px;
 }
-    .image-carousel-div{height: 585px;}
     .main-menu ul > li a {padding: 19px 4px;}
-  .location_icon_bottum_tt ul li {padding: 19px 20px;}
+  .location_icon_bottum_tt ul li {padding: 19px 32px;}
    .banner-main .carousel-caption span {font-size: 30px; line-height: 33px; padding-bottom: 10px;}
    .banner-main .carousel-caption h1 {font-size: 35px; padding-bottom: 10px; line-height: 22px;}
    .banner-main .carousel-caption p {font-size: 16px; padding: 5px 0px 17px 0px; line-height: 25px;}
@@ -164,18 +158,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .player-items{
-        margin: 0 auto
-    }
-    .player__title2{
-        margin-top: 30px;
-    }
     .logo {padding-top: 11px;}
-    .image-carousel-div{height: 500px;}
    .location_icon_bottum {width: 88% !important;}
-
-   .location_icon_bottum_tt ul .info {display: none}
-    .location_icon_bottum ul li {padding: 20px 8px;}
+   .location_icon_bottum ul li {padding: 1px 8px;}
     .main-menu ul > li a {padding: 18px 0px; font-size: 15px;}
     .location_icon_bottum_tt ul li {padding: 27px 10px;}
     .search button {width: 70px;}
@@ -198,19 +183,13 @@ ul.social_icon {display: none !important;}
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .player__title2{
-        margin-top: 30px;
-    }
     .location_icon_bottum::before {display: none;}
     .location_icon_bottum {width: 87% !important; margin-left: 0px; background: transparent; top: 10px;}
     .last {display: none;}
    .search {display: none;}
     .logo {padding-top: 0px; text-align: center; float: inherit;}
     .location_icon_bottum_tt {display: none;}
-    .social-sites{ display: none}
-    .image-carousel-div{
-        height: 426px;
-    }
+
     .mean-container .mean-bar {margin-left: 20px;}
     .banner-main .carousel-item img {height: 426px;}
     .banner-main .carousel-caption span {font-size: 25px; line-height: 19px;}
@@ -236,10 +215,6 @@ ul.social_icon {display: none !important;}
 
 
 @media (max-width: 575px) {
-    .player__title2{
-        margin-top: 30px;
-    }
-    .social-sites{ display: none}
  .location_icon_bottum::before {display: none;}
     .location_icon_bottum {width: 91% !important;
 

@@ -1,0 +1,15 @@
+.loader-container{
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F8F8F8AD;
+}
+.loader{
+
+    margin: 0 auto;
+    z-index: 10000;
+    position: marker;
+}
