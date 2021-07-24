@@ -119,7 +119,7 @@ const DesignSection = () => {
                         <div style={{
                             height: 250
                         }}>
-                            {objects?.filter((item, i) => i > 0 && i <= 3 ? item : null).map((item, index) => (
+                            {objects?.filter((item, i) => item.id !== object.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
                                     <div className="imageTitle"
                                          key={index}
@@ -145,90 +145,92 @@ const DesignSection = () => {
 
                 {/*section2*/}
 
-
-                <div className="categorySection">
-                    <div className="col-lg-3 col-md-2 col-sm-3 sectionDescription">
-                        <div>
-                            <NavLink to={{
-                                pathname: "/buildingById/" + object?.id
-                            }}>
-                                <div className="desTitle">
-                                    {object?.title}
-                                </div>
-                            </NavLink>
-                            <p className="desText">
-                                {object2?.short_description}
-                            </p>
-                        </div>
-                        <NavLink to={{
-                            pathname: "/design"
-                        }}
-                                 exact={true}
-                        >
-                            <button className="more"> Больше объектов</button>
-                        </NavLink>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="row">
-                            <div className="mainImage">
-
-                                {
-                                    object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                        <img src={selectedImg2 ? apiImage + selectedImg2 : apiImage + image}
-                                             alt="atlantis kg"
-                                             key={i}/>
-                                    ))
-                                }
+                {
+                    objects?.length > 4  ?    <div className="categorySection">
+                        <div className="col-lg-3 col-md-2 col-sm-3 sectionDescription">
+                            <div>
+                                <NavLink to={{
+                                    pathname: "/buildingById/" + object?.id
+                                }}>
+                                    <div className="desTitle">
+                                        {object?.title}
+                                    </div>
+                                </NavLink>
+                                <p className="desText">
+                                    {object2?.short_description}
+                                </p>
                             </div>
-                            <div style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "space-around",
-                                gap: 30
-                            }}>
-                                {object2?.images?.filter((img, i) => i < 3 ? img : null).map((img, index) => (
-                                    <div
-                                        style={{
-                                            marginTop: 47,
-                                            padding: "0 !important"
-                                        }}
-                                        key={index}>
+                            <NavLink to={{
+                                pathname: "/design"
+                            }}
+                                     exact={true}
+                            >
+                                <button className="more"> Больше объектов</button>
+                            </NavLink>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="row">
+                                <div className="mainImage">
 
-                                        <div className="selectedImages">
+                                    {
+                                        object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
+                                            <img src={selectedImg2 ? apiImage + selectedImg2 : apiImage + image}
+                                                 alt="atlantis kg"
+                                                 key={i}/>
+                                        ))
+                                    }
+                                </div>
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "row",
+                                    justifyContent: "space-around",
+                                    gap: 30
+                                }}>
+                                    {object2?.images?.filter((img, i) => i < 3 ? img : null).map((img, index) => (
+                                        <div
+                                            style={{
+                                                marginTop: 47,
+                                                padding: "0 !important"
+                                            }}
+                                            key={index}>
+
+                                            <div className="selectedImages">
+                                                <img
+                                                    style={{border: selectedImg2 === img ? "1px solid #033F7F" : ""}}
+                                                    src={apiImage + img}
+                                                    alt="atlantis kg"
+                                                    onClick={() => setSelectedImg2(img)}
+                                                />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className=" offset-1 col-lg-2 col-md-3 col-sm-12">
+                            <div style={{
+                                height: 250
+                            }}>
+                                {objects?.filter((item, i) => item.id !== object2.id && i > 3 ? item : null).map((item, index) => (
+                                    <>
+                                        <div className="imageTitle"
+                                             key={index}
+                                        >{item.title.substring(0, 15)}...
+                                        </div>
+                                        <div className="imgContainerLeftSide">
                                             <img
-                                                style={{border: selectedImg2 === img ? "1px solid #033F7F" : ""}}
-                                                src={apiImage + img}
+                                                src={apiImage + item?.images[0]}
                                                 alt="atlantis kg"
-                                                onClick={() => setSelectedImg2(img)}
+                                                onClick={() => dispatch(getDesign2(item.id))}
                                             />
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
-
+                                    </>
+                                ))}</div>
                         </div>
                     </div>
-                    <div className=" offset-1 col-lg-2 col-md-3 col-sm-12">
-                        <div style={{
-                            height: 250
-                        }}>
-                            {objects?.filter((item, i) => i > 3 ? item : null).map((item, index) => (
-                                <>
-                                    <div className="imageTitle"
-                                         key={index}
-                                    >{item.title.substring(0, 15)}...
-                                    </div>
-                                    <div className="imgContainerLeftSide">
-                                        <img
-                                            src={apiImage + item?.images[0]}
-                                            alt="atlantis kg"
-                                            onClick={() => dispatch(getDesign2(item.id))}
-                                        />
-                                    </div>
-                                </>
-                            ))}</div>
-                    </div>
-                </div>
+                        : null
+                }
 
             </div>
         </>
