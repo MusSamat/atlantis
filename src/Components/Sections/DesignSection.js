@@ -156,7 +156,7 @@ const DesignSection = () => {
                                     pathname: "/buildingById/" + object?.id
                                 }}>
                                     <div className="desTitle">
-                                        {object?.title}
+                                        {object2?.title}
                                     </div>
                                 </NavLink>
                                 <p className="desText">

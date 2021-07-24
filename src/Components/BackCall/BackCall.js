@@ -44,10 +44,11 @@ const BackCall = () => {
                     <div className="backCallInputs">
                         <input type="text"
                                style={{
-                                   paddingLeft: 20
+                                   paddingLeft: 40,
+                                   fontSize: 25
                                }}
                                id="nameInput"
-                               placeholder="Ваша Имя"
+                               placeholder="Ваше Имя"
                                onChange={(e) =>setName(e.target.value)}
 
                         />

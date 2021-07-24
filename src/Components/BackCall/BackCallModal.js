@@ -33,7 +33,7 @@ const BackCallModal = () => {
                     <div className="backCallModal">
                         <div className="backCallModalHeader">
                             <div className="backCallModalTitle">
-                                <p>Атлантис</p>
+                                <p>Atlantis</p>
                                 <div>
                                     <i className="fa fa-times-circle fa-2x" style={{
                                         color: "white",
@@ -55,10 +55,11 @@ const BackCallModal = () => {
                             <div className="modalInputs">
                                 <input type="text"
                                        style={{
-                                           paddingLeft: 10
+                                           paddingLeft: 10,
+                                           fontSize: 16
                                        }}
                                        id="nameInput"
-                                       placeholder="Ваша Имя"
+                                       placeholder="Ваше Имя"
                                        onChange={(e) => setName(e.target.value)}
                                 />
                                 <div style={{
