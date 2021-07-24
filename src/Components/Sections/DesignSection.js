@@ -22,8 +22,10 @@ const DesignSection = () => {
         new AccessWithBack().getData("/api/main-design").then(res => {
             dispatch(setloading(false))
             setObjects(res)
-            res.filter((item, i) => i < 1 ? item : null).map((item, i) => {
-                dispatch(getDesign1(item.id))
+            res.map((item, i) => {
+                if(i === 0){
+                    dispatch(getDesign1(item.id))
+                }
             })
             res.filter((item, i) => i === 4 ? item : null).map((item, i) => {
                 dispatch(getDesign2(item.id))
@@ -119,7 +121,7 @@ const DesignSection = () => {
                         <div style={{
                             height: 250
                         }}>
-                            {objects?.filter((item, i) => item.id !== object.id && i <= 3 ? item : null).map((item, index) => (
+                            {objects?.filter((item, i) => item.id !== object?.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
                                     <div className="imageTitle"
                                          key={index}
@@ -213,7 +215,7 @@ const DesignSection = () => {
                             <div style={{
                                 height: 250
                             }}>
-                                {objects?.filter((item, i) => item.id !== object2.id && i > 3 ? item : null).map((item, index) => (
+                                {objects?.filter((item, i) => item.id !== object2?.id && i > 3 ? item : null).map((item, index) => (
                                     <>
                                         <div className="imageTitle"
                                              key={index}

@@ -119,7 +119,7 @@ const BuildingSection = () => {
                         <div style={{
                             height: 250
                         }}>
-                            {objects?.filter((item, i) => item.id !== object.id && i <= 3 ? item : null).map((item, index) => (
+                            {objects?.filter((item, i) => item.id !== object?.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
                                     <div className="imageTitle"
                                          key={index}
@@ -214,7 +214,7 @@ const BuildingSection = () => {
                             <div style={{
                                 height: 250
                             }}>
-                                {objects?.filter((item, i) => item.id !== object2.id && i > 3 ? item : null).map((item, index) => (
+                                {objects?.filter((item, i) => item.id !== object2?.id && i > 3 ? item : null).map((item, index) => (
                                     <>
                                         <div className="imageTitle"
                                              key={index}
