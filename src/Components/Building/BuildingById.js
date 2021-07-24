@@ -24,7 +24,7 @@ const BuildingById = (props) => {
         getArchitectureById()
         window.scrollTo(0, 0)
     }, [])
-    return(
+    return (
 
         <>
             <div className="page">
@@ -36,9 +36,9 @@ const BuildingById = (props) => {
                     {object.description}</div>
                 <div className="row">
                     <div className="col-12"
-                    style={{
-                        marginBottom: 130
-                    }}>
+                         style={{
+                             marginBottom: 130
+                         }}>
                         {
                             object?.images?.filter((img, i) => i === 0 ? img : null).map((img, i) => (
                                 <img src={apiImage + img} alt="atlantis kg" key={i}
@@ -49,9 +49,9 @@ const BuildingById = (props) => {
                     </div>
 
                     <div className="buildingDivs">
-                       <p>
-                           {object.short_description}
-                       </p>
+                        <p>
+                            {object.short_description}
+                        </p>
                     </div>
 
                     {
@@ -66,30 +66,29 @@ const BuildingById = (props) => {
                     }
 
 
-
-                    <div>
-                        <div className="advantageTitle">{object.advantage}</div>
-                        <div className="row" style={{
-                            marginTop: 60
-                        }}>
-                            {
-                                object?.icons?.map((item, i) => (
-                                    <div className="col-lg-4 col-md-2 col-sm-12" style={{
-                                        padding: 15
-                                    }}>
-                                        <div className="iconsImage">
-                                            <img src={apiImage + item.images} alt="atlantis kg" key={i}
-                                                 style={{margin: "0 auto"}}
-                                            />
-                                        </div>
-                                        <div className="iconTitle">
-                                            {item.name}
-                                        </div>
-
+                </div>
+                <div>
+                    <div className="advantageTitle">{object.advantage}</div>
+                    <div className="row" style={{
+                        marginTop: 60
+                    }}>
+                        {
+                            object?.icons?.map((item, i) => (
+                                <div className="col-lg-4 col-md-2 col-sm-12" style={{
+                                    padding: 15
+                                }}>
+                                    <div className="iconsImage">
+                                        <img src={apiImage + item.images} alt="atlantis kg" key={i}
+                                             style={{margin: "0 auto"}}
+                                        />
                                     </div>
-                                ))
-                            }
-                        </div>
+                                    <div className="iconTitle">
+                                        {item.name}
+                                    </div>
+
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

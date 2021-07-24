@@ -55,13 +55,14 @@ const Partners = () => {
                 {/*    <img src="images/partner.jpg" alt="atlantis kg"/>*/}
                 {/*</div>*/}
                 <Carousels responsive={responsive}
-                           autoPlay={true} autoPlaySpeed={8000}
+                           autoPlay={true} autoPlaySpeed={2000}
+                           infinite={true}
                 >
                     {partners?.map((img, index) => (
                         <div className="partnerImage" key={index}>
                             <img
                                 src={img.image}
-                                alt="dog"
+                                alt="atlantis kg"
                             />
                         </div>
                     ))}

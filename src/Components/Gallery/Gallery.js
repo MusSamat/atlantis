@@ -53,17 +53,19 @@ const Gallery = () => {
                     Галерея
                 </div>
                 <Carousels responsive={responsive}
-                           autoPlay={true} autoPlaySpeed={3000}
+                           autoPlay={true} autoPlaySpeed={2000}
+                           infinite={true}
                 >
                     {
                         object?.map((item, i) => (
-                            <div className="gallery">
-                                <NavLink to={{
-                                pathname: "/buildingById/" + item.id
-                                }}>
+
+                            // <NavLink to={{
+                            //     pathname: "/buildingById/" + item.id
+                            // }}>
+                                <div className="gallery">
                                     <img src={apiImage + item?.images[0]} alt="atlantis kg"/>
-                                </NavLink>
-                            </div>
+                                </div>
+                            // </NavLink>
                         ))
                     }
                 </Carousels>

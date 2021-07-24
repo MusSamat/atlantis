@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="second commit">
+    <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="first changing">
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Building/building.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/building.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Category/_category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Category/_category.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Design/design.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/design.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Gallery/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Gallery/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Gallery/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Gallery/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Partners/Partners.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Partners/Partners.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
     </list>
@@ -85,7 +80,7 @@
       <workItem from="1625900043705" duration="50859000" />
       <workItem from="1626237162064" duration="33347000" />
       <workItem from="1626345499478" duration="14660000" />
-      <workItem from="1626838405952" duration="71230000" />
+      <workItem from="1626838405952" duration="73347000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>
@@ -114,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="first changing" />
+    <option name="LAST_COMMIT_MESSAGE" value="first changing" />
   </component>
 </project>
