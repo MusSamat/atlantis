@@ -33,7 +33,7 @@ const DesignById = (props) =>{
         },
         desktop: {
             breakpoint: {max: 3000, min: 1024},
-            items: 5
+            items: 3
         },
         tablet: {
             breakpoint: {max: 1024, min: 464},
@@ -72,12 +72,12 @@ const DesignById = (props) =>{
                                    autoPlay={true} autoPlaySpeed={3000}
                         >
                             {item?.images.map((img, index) => (
-                                <div className="desingByIdDiv"
+                                <div className="designByIdDiv"
                                      key={index}
                                 >
                                     <img
                                         src={apiImage + img}
-                                        alt="dog"
+                                        alt="atlantis kg"
                                     />
                                 </div>
 

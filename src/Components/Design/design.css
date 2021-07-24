@@ -11,13 +11,13 @@
     padding-top: 60px;
 }
 
-.desingByIdDiv {
-    /*width: 447px;*/
+.designByIdDiv {
+    width: 407px;
     height: 309px;
     padding: 0 10px;
 }
 
-.desingByIdDiv img{
+.designByIdDiv img{
     width: 100%;
     height: 100%;
 }

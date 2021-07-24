@@ -32,7 +32,6 @@ const Header = () => {
                                 <li>Главная</li>
                             </NavLink>
                             <NavLink to="/architecture"
-                                     exact={true}
                                      activeStyle={{
                                          color: "#679ED8",
                                      }}
@@ -40,7 +39,6 @@ const Header = () => {
                                 <li>Архитектура</li>
                             </NavLink>
                             <NavLink to="/building"
-                                     exact={true}
                                      activeStyle={{
                                          color: "#679ED8",
                                      }}

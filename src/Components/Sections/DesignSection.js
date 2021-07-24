@@ -56,9 +56,13 @@ const DesignSection = () => {
                 <div className="categorySection">
                     <div className="col-lg-3 col-md-2 col-sm-3 sectionDescription">
                         <div>
-                            <div className="desTitle">
-                                {object?.title}
-                            </div>
+                            <NavLink to={{
+                                pathname: "/designById/" + object?.id
+                            }}>
+                                <div className="desTitle">
+                                    {object?.title}
+                                </div>
+                            </NavLink>
                             <p className="desText">
                                 {object?.short_description}
                             </p>
@@ -145,9 +149,13 @@ const DesignSection = () => {
                 <div className="categorySection">
                     <div className="col-lg-3 col-md-2 col-sm-3 sectionDescription">
                         <div>
-                            <div className="desTitle">
-                                {object2?.title}
-                            </div>
+                            <NavLink to={{
+                                pathname: "/buildingById/" + object?.id
+                            }}>
+                                <div className="desTitle">
+                                    {object?.title}
+                                </div>
+                            </NavLink>
                             <p className="desText">
                                 {object2?.short_description}
                             </p>
