@@ -30,6 +30,7 @@ const Architecture = () => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         getCategory()
         getObjects()
     }, [])

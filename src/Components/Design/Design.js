@@ -31,7 +31,8 @@ const Design = () => {
         })
     }
 
-    useEffect(() => {   
+    useEffect(() => {
+        window.scrollTo(0, 0)
         getCategory()
         getObjects()
     }, [])
