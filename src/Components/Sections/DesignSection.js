@@ -123,6 +123,7 @@ const DesignSection = () => {
                                 <>
                                     <div className="imageTitle"
                                          key={index}
+                                         title={item.title}
                                     >{item.title.substring(0, 15)}...
                                     </div>
                                     <div className="imgContainerLeftSide">
@@ -216,6 +217,7 @@ const DesignSection = () => {
                                     <>
                                         <div className="imageTitle"
                                              key={index}
+                                             title={item.title}
                                         >{item.title.substring(0, 15)}...
                                         </div>
                                         <div className="imgContainerLeftSide">

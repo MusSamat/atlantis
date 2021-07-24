@@ -79,6 +79,7 @@ img {
     font-size: 18px;
     line-height: 1;
     margin-bottom: 33px;
+    cursor: pointer;
 }
 
 .imgContainerLeftSide {

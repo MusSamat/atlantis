@@ -120,6 +120,7 @@ const ArchitectureSection = () => {
                                 <>
                                     <div className="imageTitle"
                                          key={index}
+                                         title={item.title}
                                     >{item.title.substring(0, 15)}...
                                     </div>
                                     <div className="imgContainerLeftSide">
@@ -214,6 +215,7 @@ const ArchitectureSection = () => {
                                     <>
                                         <div className="imageTitle"
                                              key={index}
+                                             title={item.title}
                                         >{item.title.substring(0, 15)}...
                                         </div>
                                         <div className="imgContainerLeftSide">
