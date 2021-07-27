@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import CategorySlider from "../Category/CategorySlider/CategorySlider";
-import SubCategories from "../Category/SubCategories";
 import BackCall from "../BackCall/BackCall";
 import Gallery from "../Gallery/Gallery";
 import CategoryDesc from "../Category/CategoryDesc";
@@ -45,7 +44,11 @@ const Architecture = () => {
                 marginTop: 50,
                 marginBottom: 50
             }}>
-                <div className="row">
+                <div className="row"
+                    style={{
+                        margin: "0 auto"
+                    }}
+                >
 
                     {
                         objects?.map((item, i) => (

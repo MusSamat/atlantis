@@ -46,16 +46,24 @@
 .subColTop {
     margin-top: 100px;
 }
+.subColTop:hover{
+}
 
 .subImage {
     width: 100%;
     height: auto;
     position: relative;
 }
+
 .imageDiv{
     width: 302px;
     height: 355px;
 }
+
+.imageDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
 
 .subImage img {
     width: 100%;
@@ -72,6 +80,9 @@
     left: 210px;
     height: 170px;
     width: 140px;
+}
+.subImage .subImage2:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .subImage .subImage2 img {

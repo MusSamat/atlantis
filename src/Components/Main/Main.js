@@ -1,6 +1,6 @@
 import React from "react";
+import {useSpring, animated as a} from "react-spring";
 import MainBanner from "../Sliders/ mainBanner/MainBanner";
-import CategorySection from "../Sections/ArchitectureSection";
 import AboutToMain from "../About/AboutToMain";
 import Partners from "../Partners/Partners";
 import BackCall from "../BackCall/BackCall";
@@ -9,6 +9,15 @@ import BuildingSection from "../Sections/BuildingSection";
 import DesignSection from "../Sections/DesignSection";
 
 const Main = () =>{
+
+    const contentProps =  useSpring({
+        from: {
+            marginTop: '-550px'
+        },
+        to: {
+            marginTop: '0'
+        }
+    })
     return (
         <>
 

@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="first changing">
+      <change afterPath="$PROJECT_DIR$/public/images/logo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logo2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/Architecture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/Architecture.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/backCall.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/backCall.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Category/_category.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Category/_category.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
     </list>
@@ -45,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/store/reducer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -54,10 +60,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/Components/store/reducer" />
       <recent name="$PROJECT_DIR$/src/Components/store/actions" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -80,7 +86,7 @@
       <workItem from="1625900043705" duration="50859000" />
       <workItem from="1626237162064" duration="33347000" />
       <workItem from="1626345499478" duration="14660000" />
-      <workItem from="1626838405952" duration="82372000" />
+      <workItem from="1626838405952" duration="97731000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>

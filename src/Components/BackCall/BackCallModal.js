@@ -33,7 +33,7 @@ const BackCallModal = () => {
                     <div className="backCallModal">
                         <div className="backCallModalHeader">
                             <div className="backCallModalTitle">
-                                <p>Atlantis</p>
+                                <img src="images/logo2.png" alt="atlantis kg"/>
                                 <div>
                                     <i className="fa fa-times-circle fa-2x" style={{
                                         color: "white",

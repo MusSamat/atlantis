@@ -3,6 +3,8 @@ import "./mainBanner.css";
 import {useDispatch} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
 import AccessWithBack from "../../../service/AccessWithBack";
+import {NavLink} from "react-router-dom";
+
 
 export default function MainBanner() {
     const apiImage = "http://176.126.167.43:8008"
@@ -10,15 +12,25 @@ export default function MainBanner() {
     const [object, setObject] = useState([])
     const [selectedImg, setSelectedImg] = useState();
     const [images, setImages] = useState([])
+    const [slug, setSlug] = useState()
 
     const getObject = () => {
         dispatch(setloading(true))
         new AccessWithBack().getData("/api/main").then(res => {
             dispatch(setloading(false))
             setObject(res)
+            if(res.category === 1){
+                setSlug("architectureById")
+            }else if(res.category === 2 ){
+                setSlug("buildingById")
+            }else{
+                setSlug("designById")
+            }
             setImages(res.images)
         })
     }
+
+
 
     useEffect(() => {
         getObject()
@@ -30,15 +42,20 @@ export default function MainBanner() {
             <div className="container" style={{
                 marginTop: 100
             }}>
-                <div className="row">
+                <div className="row" >
                     <div className="mainBanner "
                     style={{
                         width: "735px !important"
                     }}>
                         {
                            images?.filter((img, i) => i < 1 ? img : null).map((image, i) => (
-                                <img src={selectedImg ? apiImage + selectedImg : apiImage + image} alt="atlantis kg"
-                                     key={i}/>
+                             <NavLink to={{
+                                 pathname: slug + "/" + object.id
+                             }}>
+                                 <img src={selectedImg ? apiImage + selectedImg : apiImage + image} alt="atlantis kg"
+                                      title="Посмотреть"
+                                      key={i}/>
+                             </NavLink>
                             ))
                         }
                     </div>
