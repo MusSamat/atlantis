@@ -8,7 +8,7 @@ import {getArchitecture1} from "../../store/actions/architecture1_actions";
 import {getArchitecture2} from "../../store/actions/architecture2_actions";
 
 const ArchitectureSection = () => {
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const [objects, setObjects] = useState([])
     const dispatch = useDispatch()
     const object = useSelector(state => state.archi1.archi1)

@@ -6,6 +6,9 @@
 }
 
 .footerCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-family: Open Sans;
     font-style: normal;

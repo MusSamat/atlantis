@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import './partners.css'
-import Images from "../Sliders/ mainBanner/Images";
 import Carousels from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import AccessWithBack from "../../service/AccessWithBack";

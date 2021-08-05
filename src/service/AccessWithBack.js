@@ -1,6 +1,9 @@
-class AccessWithBack  {
+import React from "react";
+class AccessWithBack extends React.Component{
+
     constructor() {
-        this._apiBase = 'http://176.126.167.43:8008'
+        super();
+        this._apiBase = 'http://46.101.136.60:8889'
     }
 
     async getData(url) {

@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 
 export default function MainBanner() {
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const dispatch = useDispatch()
     const [object, setObject] = useState([])
     const [selectedImg, setSelectedImg] = useState();

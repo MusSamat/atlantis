@@ -10,7 +10,7 @@ import {getDesign2} from "../../store/actions/design2_actions";
 import {NavLink} from "react-router-dom";
 
 const DesignSection = () => {
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const [objects, setObjects] = useState([])
     const dispatch = useDispatch()
     const object = useSelector(state => state.design1.design1)

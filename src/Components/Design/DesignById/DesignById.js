@@ -8,7 +8,7 @@ import {useDispatch} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
 
 const DesignById = (props) =>{
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
     const dispatch = useDispatch()

@@ -9,7 +9,7 @@ import {getBuilding2} from "../../store/actions/building2_actions";
 
 
 const BuildingSection = () => {
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const [objects, setObjects] = useState([])
     const dispatch = useDispatch()
     const object = useSelector(state => state.build1.build1)

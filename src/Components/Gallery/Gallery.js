@@ -9,8 +9,7 @@ import AccessWithBack from "../../service/AccessWithBack";
 
 
 const Gallery = () => {
-
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const dispatch = useDispatch()
     const [object, setObject] = useState([])
 

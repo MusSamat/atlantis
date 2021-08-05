@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import {setloading} from "../../store/actions/laod_action";
 
 const SubCategories = (props) => {
-    const apiImage = "http://176.126.167.43:8008"
+    const apiImage = new AccessWithBack()._apiBase
     const [architecObjects, setArchitecObjects] = useState([])
     const dispatch = useDispatch()
     const getArchitectureObjects = () => {
