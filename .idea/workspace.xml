@@ -4,16 +4,6 @@
     <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="changed favicon">
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/build/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.817d6858.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.817d6858.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.c0acbe73.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.c0acbe73.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.c0acbe73.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c4a3d2fa.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.c4a3d2fa.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +78,7 @@
       <workItem from="1626838405952" duration="98257000" />
       <workItem from="1627382717735" duration="1654000" />
       <workItem from="1628154912123" duration="6758000" />
-      <workItem from="1629190428976" duration="2369000" />
+      <workItem from="1629190428976" duration="2711000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>
@@ -111,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629192208634</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed favicon">
+      <created>1629192881490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629192881490</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +130,7 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="first changing" />
     <MESSAGE value="change modal style" />
+    <MESSAGE value="changed build first" />
     <MESSAGE value="changed favicon" />
     <option name="LAST_COMMIT_MESSAGE" value="changed favicon" />
   </component>
