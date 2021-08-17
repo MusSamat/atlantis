@@ -32,7 +32,12 @@
     font-weight: 500;
     font-size: 25px;
     color: #253B59;
+    gap: 30px;
 }
 .headerN ul > li{
     color: #253B59 !important;
+}
+.vertical-line{
+    color: #878a88;
+    opacity: 0.9;
 }

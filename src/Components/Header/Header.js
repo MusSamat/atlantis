@@ -1,7 +1,6 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import "./_header.css"
-import HeaderList from "./HeaderList";
 
 const Header = () => {
     return (
@@ -21,7 +20,9 @@ const Header = () => {
                            <img src="/images/log.png" alt="atlantis kg"/>
                        </div>
                    </NavLink>
-                    <div >
+                    <div style={{
+                        margin: "0 auto"
+                    }}>
                         <ul className="menuList">
                             <NavLink to="/"
                                      exact={true}
@@ -31,6 +32,7 @@ const Header = () => {
                             >
                                 <li>Главная</li>
                             </NavLink>
+                            <div className="vertical-line">|</div>
                             <NavLink to="/architecture"
                                      activeStyle={{
                                          color: "#679ED8",
@@ -38,6 +40,7 @@ const Header = () => {
                             >
                                 <li>Архитектура</li>
                             </NavLink>
+                            <div className="vertical-line">|</div>
                             <NavLink to="/building"
                                      activeStyle={{
                                          color: "#679ED8",
@@ -45,6 +48,7 @@ const Header = () => {
                             >
                                 <li>Строительство</li>
                             </NavLink>
+                            <div className="vertical-line">|</div>
                             <NavLink to="/design"
                                      exact={true}
                                      activeStyle={{
@@ -53,6 +57,7 @@ const Header = () => {
                             >
                                 <li>Дизайн</li>
                             </NavLink>
+                            <div className="vertical-line">|</div>
                             <NavLink to="/about"
                                      exact={true}
                                      activeStyle={{
@@ -61,6 +66,7 @@ const Header = () => {
                             >
                                 <li>О нас</li>
                             </NavLink>
+                            <div className="vertical-line">|</div>
                             <NavLink to="/contact"
                                      exact={true}
                                 activeStyle={{
