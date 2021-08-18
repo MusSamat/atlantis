@@ -14,6 +14,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="container">
+
                 <div className="headerN">
                    <NavLink to="/" exact={true}>
                        <div className="logo">
