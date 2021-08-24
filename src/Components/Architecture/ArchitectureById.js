@@ -4,6 +4,7 @@ import AccessWithBack from "../../service/AccessWithBack";
 import BackCall from "../BackCall/BackCall";
 import {useDispatch} from "react-redux";
 import {setloading} from "../../store/actions/laod_action";
+import ObjectInfo from "../ObjectInfo";
 
 const ArchitectureById = (props) => {
     const apiImage = new AccessWithBack()._apiBase
@@ -32,7 +33,15 @@ const ArchitectureById = (props) => {
 
                 <div className="description">
                     {object.description}</div>
-                <div className="row">
+                <ObjectInfo
+                    location={"г. Бишкек"}
+                    architect={"Абдразак уулу Мирлан"}
+                    area={2550}
+                    year={2019}
+                />
+                <div className="row" style={{
+                    marginTop: 24
+                }}>
                     <div className="col-12">
                         {
                             object?.images?.filter((img, i) => i === 0 ? img : null).map((img, i) => (
@@ -45,7 +54,7 @@ const ArchitectureById = (props) => {
 
                     {
                         object?.images?.map((img, i) => (
-                            <div className="col-lg-3 col-md-6 archImages">
+                            <div className="col-4 archImages">
                                 <img src={apiImage + img} alt="atlantis kg" key={i}
                                      style={{margin: "0 auto"}}
                                 />

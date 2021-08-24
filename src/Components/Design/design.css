@@ -12,11 +12,29 @@
 }
 
 .designByIdDiv {
-    width: 407px;
-    height: 309px;
-    padding: 0 10px;
+    width: 426px;
+    height: 329px;
+    padding: 10px 10px;
+    position: relative;
 }
-
+.designByIdDiv .objectTitle{
+    position: absolute;
+    left:0;
+    top: 220px;
+    width: 241px;
+    height: 49px;
+    text-align: center;
+    background: rgba(255, 255,255,0.62);
+}
+.designByIdDiv .objectTitle p{
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #253B59;
+    margin-top: 7px;
+}
 .designByIdDiv img{
     width: 100%;
     height: 100%;

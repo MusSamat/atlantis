@@ -7,14 +7,14 @@ import "react-multi-carousel/lib/styles.css";
 import {useDispatch} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
 
-const DesignById = (props) =>{
+const DesignById = (props) => {
     const apiImage = new AccessWithBack()._apiBase
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
     const dispatch = useDispatch()
     const getDesignById = () => {
         dispatch(setloading(true))
-        new AccessWithBack().getData("/api/design/" +id).then(res => {
+        new AccessWithBack().getData("/api/design/" + id).then(res => {
             dispatch(setloading(false))
             setObject(res)
         })
@@ -22,7 +22,7 @@ const DesignById = (props) =>{
 
     useEffect(() => {
         getDesignById()
-        window.scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [])
 
     const responsive = {
@@ -45,8 +45,8 @@ const DesignById = (props) =>{
         }
     };
 
-     return(
-        <>
+    return (
+        <div className="page">
             <div style={{
                 fontFamily: "Montserrat",
                 fontStyle: "normal",
@@ -55,39 +55,42 @@ const DesignById = (props) =>{
                 color: "#253b59",
                 textAlign: "center",
                 marginTop: 50,
-
+                marginBottom: 100
             }}>
                 {object.title}
             </div>
-            {
-                object?.images?.map((item, i) => (
-                    <div className="page" style={{
-                        marginBottom: 30
-                    }}>
-                        <div className="designTitle">
-                            {item.name}
-                        </div>
-
-                        <Carousels responsive={responsive}
-                                   autoPlay={true} autoPlaySpeed={3000}
-                        >
+            <div className="row">
+                {
+                    object?.images?.map((item, i) => (
+                        <>
                             {item?.images.map((img, index) => (
-                                <div className="designByIdDiv"
+                                <div className="col-4 designByIdDiv"
                                      key={index}
                                 >
+
                                     <img
                                         src={apiImage + img}
                                         alt="atlantis kg"
                                     />
+                                    {
+                                        index === 0 ?
+                                            <div className="objectTitle">
+                                                <p>
+                                                    {item.name}
+                                                </p>
+                                            </div>:
+                                            null
+                                    }
                                 </div>
 
                             ))}
-                        </Carousels>
-                    </div>
-                ))
-            }
+                        </>
+
+                    ))
+                }
+            </div>
             <BackCall/>
-        </>
+        </div>
     )
 }
 

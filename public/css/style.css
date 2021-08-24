@@ -2522,7 +2522,7 @@ ul.Links_footer li {
 .page {
     max-width: 1276px;
     height: auto;
-    /*padding: 0 15px;*/
+    padding: 0 10px;
     position: relative;
     overflow: hidden;
     margin: 0 auto;

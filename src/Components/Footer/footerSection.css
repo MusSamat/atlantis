@@ -1,19 +1,31 @@
 .footerSection{
     background: #679ED8;
-    height: 200px;
+    height: 70px;
     width: 100%;
     color: white;
 }
 
+.footerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footerCol {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3rem;
     text-align: center;
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 24px;
     color: #FFFFFF;
+}
+
+.footerCol i{
+    font-size: 28px;
 }

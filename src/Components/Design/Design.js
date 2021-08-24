@@ -1,13 +1,12 @@
 import React, {useEffect, useState} from "react";
-import CategorySlider from "../Category/CategorySlider/CategorySlider";
-import SubCategories from "../Category/SubCategories";
+
 import BackCall from "../BackCall/BackCall";
 import Gallery from "../Gallery/Gallery";
 import CategoryDesc from "../Category/CategoryDesc";
 import AccessWithBack from "../../service/AccessWithBack";
-import {NavLink} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {setloading} from "../../store/actions/laod_action";
+import ObjectById from "../ObjectById";
 
 const Design = () => {
 
@@ -36,44 +35,52 @@ const Design = () => {
         getCategory()
         getObjects()
     }, [])
-    return(
+    return (
         <>
-            <CategorySlider
-                category={category}
-            />
             <div className="page" style={{
                 marginTop: 50,
                 marginBottom: 50
             }}>
-                <div className="row">
+                <div className="ArchitectureTitle">
+                    Дизайн интерьера
+                </div>
+                <div className="row"
+                     style={{
+                         margin: "50px auto"
+                     }}
+                >
 
                     {
                         objects?.map((item, i) => (
-                            <div className="col-lg-4 col-md-6 col-sm-12 subColTop" key={i}>
-                                <NavLink to={{
-                                    pathname: "/designById/" +item.id
-                                }}>
-                                    <div className="subTitle">
-                                        {item.title}
-                                    </div>
-                                    <div className="subImage">
-                                       <div className="imageDiv">
-                                           <img src={item?.image1}
-                                                style={{
-                                                    height: 355
-                                                }}
-                                           />
-                                       </div>
-                                        <div className="subImage2">
-                                            <img src={item?.image2}/>
-                                        </div>
-                                    </div>
-                                </NavLink>
-                            </div>
+                            <ObjectById
+                                object={item}
+                            />
+                            // <div className="col-lg-4 col-md-6 col-sm-12 subColTop" key={i}>
+                            //     <NavLink to={{
+                            //         pathname: "/architectureById/" + item.id
+                            //     }}>
+                            //         <div className="subTitle">
+                            //             {item.title}
+                            //         </div>
+                            //         <div className="subImage">
+                            //             <div className="imageDiv">
+                            //                 <img src={apiImage + item?.images[0]}
+                            //                      style={{
+                            //                          height: 355
+                            //                      }}
+                            //                 />
+                            //             </div>
+                            //             <div className="subImage2">
+                            //                 <img src={apiImage + item?.images[1]}/>
+                            //             </div>
+                            //         </div>
+                            //     </NavLink>
+                            // </div>
                         ))
                     }
                 </div>
             </div>
+
             <BackCall/>
             <CategoryDesc
                 title={category.title}
