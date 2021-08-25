@@ -59,7 +59,7 @@ const DesignSection = () => {
 
                             {
 
-                                    <img src={selectedImg ? selectedImg : object.image1}
+                                    <img src={selectedImg ? selectedImg : object?.image1}
                                          alt="atlantis kg"/>
                             }
                         </div>
@@ -73,40 +73,40 @@ const DesignSection = () => {
                                 <div style={{marginTop: 20, padding: "0 !important"}}>
                                     <div className="selectedImages">
                                         <img
-                                            style={{border: selectedImg === object.image2 ? "1px solid #033F7F" : ""}}
-                                            src={object.image2}
+                                            style={{border: selectedImg === object?.image2 ? "1px solid #033F7F" : ""}}
+                                            src={object?.image2}
                                             alt="atlantis kg"
-                                            onClick={() => setSelectedImg(object.image2)}
+                                            onClick={() => setSelectedImg(object?.image2)}
                                         />
                                     </div>
                                 </div>
                             <div style={{marginTop: 20, padding: "0 !important"}}>
                                     <div className="selectedImages">
                                         <img
-                                            style={{border: selectedImg === object.image3 ? "1px solid #033F7F" : ""}}
-                                            src={object.image3}
+                                            style={{border: selectedImg === object?.image3 ? "1px solid #033F7F" : ""}}
+                                            src={object?.image3}
                                             alt="atlantis kg"
-                                            onClick={() => setSelectedImg(object.image3)}
+                                            onClick={() => setSelectedImg(object?.image3)}
                                         />
                                     </div>
                                 </div>
                             <div style={{marginTop: 20, padding: "0 !important"}}>
                                     <div className="selectedImages">
                                         <img
-                                            style={{border: selectedImg === object.image4 ? "1px solid #033F7F" : ""}}
-                                            src={object.image4}
+                                            style={{border: selectedImg === object?.image4 ? "1px solid #033F7F" : ""}}
+                                            src={object?.image4}
                                             alt="atlantis kg"
-                                            onClick={() => setSelectedImg(object.image4)}
+                                            onClick={() => setSelectedImg(object?.image4)}
                                         />
                                     </div>
                                 </div>
                             <div style={{marginTop: 20, padding: "0 !important"}}>
                                     <div className="selectedImages">
                                         <img
-                                            style={{border: selectedImg === object.image5 ? "1px solid #033F7F" : ""}}
-                                            src={object.image5}
+                                            style={{border: selectedImg === object?.image5 ? "1px solid #033F7F" : ""}}
+                                            src={object?.image5}
                                             alt="atlantis kg"
-                                            onClick={() => setSelectedImg(object.image5)}
+                                            onClick={() => setSelectedImg(object?.image5)}
                                         />
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@ const DesignSection = () => {
                                 </div>
                                 <div className="mainImage">
 
-                                            <img src={selectedImg2 ?  selectedImg2 : object2.image1}
+                                            <img src={selectedImg2 ?  selectedImg2 : object2?.image1}
                                                  alt="atlantis kg"/>
                                 </div>
                                 <div style={{
@@ -175,40 +175,40 @@ const DesignSection = () => {
                                     <div style={{marginTop: 20, padding: "0 !important"}}>
                                         <div className="selectedImages">
                                             <img
-                                                style={{border: selectedImg2 === object2.image2 ? "1px solid #033F7F" : ""}}
-                                                src={object2.image2}
+                                                style={{border: selectedImg2 === object2?.image2 ? "1px solid #033F7F" : ""}}
+                                                src={object2?.image2}
                                                 alt="atlantis kg"
-                                                onClick={() => setSelectedImg2(object2.image2)}
+                                                onClick={() => setSelectedImg2(object2?.image2)}
                                             />
                                         </div>
                                     </div>
                                     <div style={{marginTop: 20, padding: "0 !important"}}>
                                         <div className="selectedImages">
                                             <img
-                                                style={{border: selectedImg2 === object2.image3 ? "1px solid #033F7F" : ""}}
-                                                src={object2.image3}
+                                                style={{border: selectedImg2 === object2?.image3 ? "1px solid #033F7F" : ""}}
+                                                src={object2?.image3}
                                                 alt="atlantis kg"
-                                                onClick={() => setSelectedImg2(object2.image3)}
+                                                onClick={() => setSelectedImg2(object2?.image3)}
                                             />
                                         </div>
                                     </div>
                                     <div style={{marginTop: 20, padding: "0 !important"}}>
                                         <div className="selectedImages">
                                             <img
-                                                style={{border: selectedImg2 === object2.image4 ? "1px solid #033F7F" : ""}}
-                                                src={object2.image4}
+                                                style={{border: selectedImg2 === object2?.image4 ? "1px solid #033F7F" : ""}}
+                                                src={object2?.image4}
                                                 alt="atlantis kg"
-                                                onClick={() => setSelectedImg2(object2.image4)}
+                                                onClick={() => setSelectedImg2(object2?.image4)}
                                             />
                                         </div>
                                     </div>
                                     <div style={{marginTop: 20, padding: "0 !important"}}>
                                         <div className="selectedImages">
                                             <img
-                                                style={{border: selectedImg2 === object2.image5 ? "1px solid #033F7F" : ""}}
-                                                src={object2.image5}
+                                                style={{border: selectedImg2 === object2?.image5 ? "1px solid #033F7F" : ""}}
+                                                src={object2?.image5}
                                                 alt="atlantis kg"
-                                                onClick={() => setSelectedImg2(object2.image5)}
+                                                onClick={() => setSelectedImg2(object2?.image5)}
                                             />
                                         </div>
                                     </div>
