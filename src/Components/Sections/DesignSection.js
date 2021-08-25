@@ -71,25 +71,7 @@ const DesignSection = () => {
                             justifyContent: "space-between",
                             marginRight: 20
                         }}>
-                            {object?.images?.filter((img, i) => i < 3 && selectedImg !== img ? img : null).map((img, index) => (
-                                <div
-                                    style={{
-                                        marginTop: 20,
-                                        padding: "0 !important"
-                                    }}
-                                    key={index}>
-
-                                    <div className="selectedImages">
-                                        <img
-                                            style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                            src={apiImage + img}
-                                            alt="atlantis kg"
-                                            onClick={() => setSelectedImg(img)}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
-                            {object?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (
+                            {object?.images?.filter((img, i) => i < 4).map((img, index) => (
                                 <div
                                     style={{
                                         marginTop: 20,
@@ -172,25 +154,7 @@ const DesignSection = () => {
                                     justifyContent: "space-between",
                                     marginRight: 20
                                 }}>
-                                    {object2?.images?.filter((img, i) => i < 3 && selectedImg !== img ? img : null).map((img, index) => (
-                                        <div
-                                            style={{
-                                                marginTop: 20,
-                                                padding: "0 !important"
-                                            }}
-                                            key={index}>
-
-                                            <div className="selectedImages">
-                                                <img
-                                                    style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                                    src={apiImage + img}
-                                                    alt="atlantis kg"
-                                                    onClick={() => setSelectedImg(img)}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
-                                    {object2?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (
+                                    {object2?.images?.filter((img, i) => i < 4).map((img, index) => (
                                         <div
                                             style={{
                                                 marginTop: 20,
@@ -234,7 +198,7 @@ const DesignSection = () => {
                                                  style={{
                                                      textAlign: "center"
                                                  }}
-                                            >{item.title.substring(0, 15)}...
+                                            >{item.title.substring(0, 40)}...
                                             </div>
                                             <div className="imgContainerLeftSide">
                                                 <img

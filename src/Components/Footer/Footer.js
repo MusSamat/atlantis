@@ -10,9 +10,10 @@ const Footer = () => {
                     paddingTop: 20
                 }}>
                     <div className="col-lg-8 col-md-6 col-sm-12 footerCol" style={{justifyContent: "flex-start"}}>
-                        Copyright ©2021 All rights reserved | This website is made with by SigmaSoft.kg
+                        Copyright ©2021 All rights reserved | This website is made by SigmaSoft.kg
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 footerCol">
+                        {/*<NavLink to={{pathname: 'https://wa.me/996552180305'}} target="_blank">*/}
                         <NavLink to={{pathname: 'https://wa.me/996552180305'}} target="_blank">
                             <i className='fa fa-whatsapp fa' style={{color: "white"}}></i>
                         </NavLink>

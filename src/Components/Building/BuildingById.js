@@ -6,6 +6,7 @@ import AccessWithBack from "../../service/AccessWithBack";
 import "./building.css"
 import Gallery from "../Gallery/Gallery";
 import ObjectInfo from "../ObjectInfo";
+import {toast} from "react-toastify";
 
 
 const BuildingById = (props) => {
@@ -19,6 +20,16 @@ const BuildingById = (props) => {
             dispatch(setloading(false))
             setObject(res)
         })
+    }
+
+    function copy() {
+        const el = document.createElement('input');
+        el.value = window.location.href;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        toast.success("Ссылка скопировано")
     }
 
     useEffect(() => {
@@ -35,12 +46,17 @@ const BuildingById = (props) => {
 
                 <div className="description">
                     {object.description}</div>
-                <ObjectInfo
-                    location={"г. Бишкек"}
-                    architect={"Абдразак уулу Мирлан"}
-                    area={2550}
-                    year={2019}
-                />
+                <div className="copyDiv">
+                    <ObjectInfo
+                        location={object?.address}
+                        architect={object?.architect}
+                        area={object?.square}
+                        year={object?.year}
+                    />
+                    <div className="copyButton">
+                        <button className="more" onClick={copy} style={{width: "4rem"}} title="Копировать ссылку"> <i className='fa fa-copy fa' style={{color: "white"}}></i></button>
+                    </div>
+                </div>
                 <div className="row" style={{
                     marginTop: 24
                 }}>

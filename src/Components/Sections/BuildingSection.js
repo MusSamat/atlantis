@@ -73,7 +73,7 @@ const BuildingSection = () => {
                             justifyContent: "space-between",
                             marginRight: 20
                         }}>
-                            {object?.images?.filter((img, i) => i < 3 && selectedImg !== img ? img : null).map((img, index) => (
+                            {object?.images?.filter((img, i) => i < 4).map((img, index) => (
                                 <div
                                     style={{
                                         marginTop: 20,
@@ -91,24 +91,24 @@ const BuildingSection = () => {
                                     </div>
                                 </div>
                             ))}
-                            {object?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (
-                                <div
-                                    style={{
-                                        marginTop: 20,
-                                        padding: "0 !important"
-                                    }}
-                                    key={index}>
+                            {/*{object?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (*/}
+                            {/*    <div*/}
+                            {/*        style={{*/}
+                            {/*            marginTop: 20,*/}
+                            {/*            padding: "0 !important"*/}
+                            {/*        }}*/}
+                            {/*        key={index}>*/}
 
-                                    <div className="selectedImages">
-                                        <img
-                                            style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                            src={apiImage + img}
-                                            alt="atlantis kg"
-                                            onClick={() => setSelectedImg(img)}
-                                        />
-                                    </div>
-                                </div>
-                            ))}
+                            {/*        <div className="selectedImages">*/}
+                            {/*            <img*/}
+                            {/*                style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}*/}
+                            {/*                src={apiImage + img}*/}
+                            {/*                alt="atlantis kg"*/}
+                            {/*                onClick={() => setSelectedImg(img)}*/}
+                            {/*            />*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*))}*/}
                         </div>
                         <div className="objectInfo">
                             <ObjectInfo
@@ -118,8 +118,8 @@ const BuildingSection = () => {
                                 year={object?.year}
                             />
                             <div className="moreInfo">
-                                <NavLink to={{pathname: "/buildingById/" + object?.id}}><span>Прочитать больше...</span></NavLink>
-                                <NavLink to="/building"><button className="more" style={{marginRight: 20}}> Больше объектов</button></NavLink>
+                                <NavLink to={{pathname: "/architectureById/" + object?.id}}><span>Прочитать больше...</span></NavLink>
+                                <NavLink to="/architecture"><button className="more" style={{marginRight: 20}}> Больше объектов</button></NavLink>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ const BuildingSection = () => {
                                         <img
                                             src={apiImage + item?.images[0]}
                                             alt="atlantis kg"
-                                            onClick={() => dispatch(getBuilding1(item.id))}
+                                            onClick={() => {dispatch(getBuilding1(item.id)); setSelectedImg(null)}}
                                         />
                                     </div>
                                 </>
@@ -174,25 +174,7 @@ const BuildingSection = () => {
                                     justifyContent: "space-between",
                                     marginRight: 20
                                 }}>
-                                    {object2?.images?.filter((img, i) => i < 3 && selectedImg !== img ? img : null).map((img, index) => (
-                                        <div
-                                            style={{
-                                                marginTop: 20,
-                                                padding: "0 !important"
-                                            }}
-                                            key={index}>
-
-                                            <div className="selectedImages">
-                                                <img
-                                                    style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                                    src={apiImage + img}
-                                                    alt="atlantis kg"
-                                                    onClick={() => setSelectedImg(img)}
-                                                />
-                                            </div>
-                                        </div>
-                                    ))}
-                                    {object2?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (
+                                    {object2?.images?.filter((img, i) => i < 4 ).map((img, index) => (
                                         <div
                                             style={{
                                                 marginTop: 20,
@@ -236,7 +218,7 @@ const BuildingSection = () => {
                                                  style={{
                                                      textAlign: "center"
                                                  }}
-                                            >{item.title.substring(0, 15)}...
+                                            >{item.title.substring(0, 40)}...
                                             </div>
                                             <div className="imgContainerLeftSide">
                                                 <img

@@ -11,6 +11,17 @@
     padding-top: 60px;
 }
 
+.copyDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.copyButton{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
 .description {
     font-family: Montserrat;
     font-style: normal;
