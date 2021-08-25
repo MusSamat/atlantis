@@ -58,11 +58,9 @@ const DesignSection = () => {
                         <div className="mainImage">
 
                             {
-                                object?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                    <img src={selectedImg ? apiImage + selectedImg : apiImage + image}
-                                         alt="atlantis kg"
-                                         key={i}/>
-                                ))
+
+                                    <img src={selectedImg ? selectedImg : object.image1}
+                                         alt="atlantis kg"/>
                             }
                         </div>
                         <div style={{
@@ -71,24 +69,48 @@ const DesignSection = () => {
                             justifyContent: "space-between",
                             marginRight: 20
                         }}>
-                            {object?.images?.filter((img, i) => i < 4).map((img, index) => (
-                                <div
-                                    style={{
-                                        marginTop: 20,
-                                        padding: "0 !important"
-                                    }}
-                                    key={index}>
 
+                                <div style={{marginTop: 20, padding: "0 !important"}}>
                                     <div className="selectedImages">
                                         <img
-                                            style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                            src={apiImage + img}
+                                            style={{border: selectedImg === object.image2 ? "1px solid #033F7F" : ""}}
+                                            src={object.image2}
                                             alt="atlantis kg"
-                                            onClick={() => setSelectedImg(img)}
+                                            onClick={() => setSelectedImg(object.image2)}
                                         />
                                     </div>
                                 </div>
-                            ))}
+                            <div style={{marginTop: 20, padding: "0 !important"}}>
+                                    <div className="selectedImages">
+                                        <img
+                                            style={{border: selectedImg === object.image3 ? "1px solid #033F7F" : ""}}
+                                            src={object.image3}
+                                            alt="atlantis kg"
+                                            onClick={() => setSelectedImg(object.image3)}
+                                        />
+                                    </div>
+                                </div>
+                            <div style={{marginTop: 20, padding: "0 !important"}}>
+                                    <div className="selectedImages">
+                                        <img
+                                            style={{border: selectedImg === object.image4 ? "1px solid #033F7F" : ""}}
+                                            src={object.image4}
+                                            alt="atlantis kg"
+                                            onClick={() => setSelectedImg(object.image4)}
+                                        />
+                                    </div>
+                                </div>
+                            <div style={{marginTop: 20, padding: "0 !important"}}>
+                                    <div className="selectedImages">
+                                        <img
+                                            style={{border: selectedImg === object.image5 ? "1px solid #033F7F" : ""}}
+                                            src={object.image5}
+                                            alt="atlantis kg"
+                                            onClick={() => setSelectedImg(object.image5)}
+                                        />
+                                    </div>
+                                </div>
+
                         </div>
                         <div className="objectInfo">
                             <ObjectInfo
@@ -121,7 +143,7 @@ const DesignSection = () => {
                                         <img
                                             src={apiImage + item?.images[0]}
                                             alt="atlantis kg"
-                                            onClick={() => dispatch(getDesign1(item.id))}
+                                            onClick={() => {dispatch(getDesign1(item.id)); setSelectedImg(null)}}
                                         />
                                     </div>
                                 </>
@@ -140,13 +162,8 @@ const DesignSection = () => {
                                 </div>
                                 <div className="mainImage">
 
-                                    {
-                                        object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                            <img src={selectedImg2 ? apiImage + selectedImg2 : apiImage + image}
-                                                 alt="atlantis kg"
-                                                 key={i}/>
-                                        ))
-                                    }
+                                            <img src={selectedImg2 ?  selectedImg2 : object2.image1}
+                                                 alt="atlantis kg"/>
                                 </div>
                                 <div style={{
                                     display: "flex",
@@ -154,24 +171,48 @@ const DesignSection = () => {
                                     justifyContent: "space-between",
                                     marginRight: 20
                                 }}>
-                                    {object2?.images?.filter((img, i) => i < 4).map((img, index) => (
-                                        <div
-                                            style={{
-                                                marginTop: 20,
-                                                padding: "0 !important"
-                                            }}
-                                            key={index}>
 
-                                            <div className="selectedImages">
-                                                <img
-                                                    style={{border: selectedImg2 === img ? "1px solid #033F7F" : ""}}
-                                                    src={apiImage + img}
-                                                    alt="atlantis kg"
-                                                    onClick={() => setSelectedImg2(img)}
-                                                />
-                                            </div>
+                                    <div style={{marginTop: 20, padding: "0 !important"}}>
+                                        <div className="selectedImages">
+                                            <img
+                                                style={{border: selectedImg2 === object2.image2 ? "1px solid #033F7F" : ""}}
+                                                src={object2.image2}
+                                                alt="atlantis kg"
+                                                onClick={() => setSelectedImg2(object2.image2)}
+                                            />
                                         </div>
-                                    ))}
+                                    </div>
+                                    <div style={{marginTop: 20, padding: "0 !important"}}>
+                                        <div className="selectedImages">
+                                            <img
+                                                style={{border: selectedImg2 === object2.image3 ? "1px solid #033F7F" : ""}}
+                                                src={object2.image3}
+                                                alt="atlantis kg"
+                                                onClick={() => setSelectedImg2(object2.image3)}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div style={{marginTop: 20, padding: "0 !important"}}>
+                                        <div className="selectedImages">
+                                            <img
+                                                style={{border: selectedImg2 === object2.image4 ? "1px solid #033F7F" : ""}}
+                                                src={object2.image4}
+                                                alt="atlantis kg"
+                                                onClick={() => setSelectedImg2(object2.image4)}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div style={{marginTop: 20, padding: "0 !important"}}>
+                                        <div className="selectedImages">
+                                            <img
+                                                style={{border: selectedImg2 === object2.image5 ? "1px solid #033F7F" : ""}}
+                                                src={object2.image5}
+                                                alt="atlantis kg"
+                                                onClick={() => setSelectedImg2(object2.image5)}
+                                            />
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div className="objectInfo">
                                     <ObjectInfo
@@ -204,7 +245,7 @@ const DesignSection = () => {
                                                 <img
                                                     src={apiImage + item?.images[0]}
                                                     alt="atlantis kg"
-                                                    onClick={() => dispatch(getDesign2(item.id))}
+                                                    onClick={() => {dispatch(getDesign2(item.id)); setSelectedImg2(null)}}
                                                 />
                                             </div>
                                         </>

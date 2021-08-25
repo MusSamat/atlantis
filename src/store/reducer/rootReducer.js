@@ -6,6 +6,7 @@ import fetch_building1 from "./building1_reducer";
 import fetch_building2 from "./building2_reducer";
 import fetch_design1 from "./design1_reducer";
 import fetch_design2 from "./design2_reducer";
+import fetch_buildingItems from "./buildingSectionReducer";
 
 export default combineReducers({
     load: loadreducer,
@@ -14,5 +15,6 @@ export default combineReducers({
     build1: fetch_building1,
     build2: fetch_building2,
     design1: fetch_design1,
-    design2: fetch_design2
+    design2: fetch_design2,
+    buildingItems: fetch_buildingItems
 })

@@ -4,7 +4,7 @@ import AccessWithBack from "../../service/AccessWithBack";
 
 export const getBuilding2 = (id) => (dispatch) => {
     dispatch(setloading(true))
-    new AccessWithBack().getData("/api/main-building/" + id).then(res => {
+    new AccessWithBack().getData("/api/building/" + id).then(res => {
         dispatch(setloading(false))
         dispatch({
             type: FETCH_BUILDING2,
