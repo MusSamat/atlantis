@@ -37,7 +37,8 @@
 .archImages{
     width: 413px !important;
     height: 258px;
-    margin: 20px auto;
+    margin-top: 20px;
+    padding: 0 10px !important;
 }
 .archImages img{
     width: 100%;

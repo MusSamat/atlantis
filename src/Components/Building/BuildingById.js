@@ -69,16 +69,16 @@ const BuildingById = (props) => {
                             ))
                         }
                     </div>
-                    {
-                        object?.images?.map((img, i) => (
-                            <div className="col-4 archImages">
-                                <img src={apiImage + img} alt="atlantis kg" key={i}
-                                     style={{margin: "0 auto"}}
-                                />
-                            </div>
+                    <div className="row">
+                        {
+                            object?.images?.map((img, i) => (
+                                <div className="col-4 archImages">
+                                    <img src={apiImage + img} alt="atlantis kg" key={i}/>
+                                </div>
 
-                        ))
-                    }
+                            ))
+                        }
+                    </div>
 
                 </div>
                 {/*<div>*/}

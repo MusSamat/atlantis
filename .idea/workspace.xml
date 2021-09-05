@@ -5,7 +5,11 @@
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/categorySection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/categorySection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +86,7 @@
       <workItem from="1628154912123" duration="6758000" />
       <workItem from="1629190428976" duration="7863000" />
       <workItem from="1629539211491" duration="54970000" />
+      <workItem from="1630820291319" duration="3204000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>
