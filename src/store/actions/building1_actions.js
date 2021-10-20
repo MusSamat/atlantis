@@ -3,7 +3,6 @@ import {setloading} from "./laod_action";
 import AccessWithBack from "../../service/AccessWithBack";
 
 export const getBuilding1 = (id) => (dispatch) => {
-    console.log(id)
     dispatch(setloading(true))
     new AccessWithBack().getData("/api/building/" + id).then(res => {
         dispatch(setloading(false))

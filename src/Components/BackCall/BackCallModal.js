@@ -1,29 +1,31 @@
 import React, {useState} from "react";
-import {FaClosedCaptioning} from "react-icons/all";
 import "./backCall.css"
-import {NavLink as Link} from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
-import {setBackCall} from "../../service/setCallBack";
 import AccessWithBack from "../../service/AccessWithBack";
 import {toast} from "react-toastify";
 
 const BackCallModal = () => {
 
     const [showModal, setShowModal] = useState(false)
-    const [name, setName] = useState()
+    const [name, setName] = useState(null)
     const [phoneNumber, setPhoneNumber] = useState()
 
     const setCallBack = () => {
-        let body = JSON.stringify(
-            {
-                name: name,
-                phone: phoneNumber,
-            }
-        )
-        new AccessWithBack().setData("/api/backcall/", body).then(() => {
-            document.getElementById('nameInput').value=" "
-            toast.success("Ваша команда успешно выполнено!")
-        })
+        if( name !== null && phoneNumber.length > 11){
+            let body = JSON.stringify(
+                {
+                    name: name,
+                    phone: phoneNumber,
+                }
+            )
+            new AccessWithBack().setData("/api/backcall/", body).then(() => {
+                document.getElementById('nameInput').value=" "
+                setPhoneNumber(null)
+                toast.success("Ваша команда успешно выполнено!")
+            })
+        }else{
+            toast.error("Проверьте в правильности")
+        }
     }
 
     return (
@@ -33,7 +35,7 @@ const BackCallModal = () => {
                     <div className="backCallModal">
                         <div className="backCallModalHeader">
                             <div className="backCallModalTitle">
-                                <img src="images/logo2.png" alt="atlantis kg"/>
+                                <img src="/images/logo2.png" alt="atlantis kg"/>
                                 <div>
                                     <i className="fa fa-times-circle fa-2x" style={{
                                         color: "white",
@@ -66,7 +68,12 @@ const BackCallModal = () => {
                                     width: "100%"
                                 }}>
                                     <PhoneInput
-                                        country={'kg'}
+                                        country="kg"
+                                        defaultCountry="kg"
+                                        onlyCountries={['kg', 'kz', 'ru']}
+                                        masks={{kg: '(...) ..-..-..', kz: '(....) ...-....'}}
+                                        priority={{kg: 0, ru: 1, kz: 2}}
+                                        value={phoneNumber}
                                         onChange={phoneNumber => setPhoneNumber(phoneNumber)}
                                     />
                                 </div>
@@ -106,8 +113,8 @@ const BackCallModal = () => {
                             <defs>
                                 <filter id="filter0_d" x="0" y="0" width="109" height="109"
                                         filterUnits="userSpaceOnUse"
-                                        color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                        colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                                     <feColorMatrix in="SourceAlpha" type="matrix"
                                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
                                     <feOffset/>

@@ -141,7 +141,7 @@ const DesignSection = () => {
                                     </div>
                                     <div className="imgContainerLeftSide">
                                         <img
-                                            src={apiImage + item?.images[0]}
+                                            src={item?.images[0]}
                                             alt="atlantis kg"
                                             onClick={() => {dispatch(getDesign1(item.id)); setSelectedImg(null)}}
                                         />
@@ -243,7 +243,7 @@ const DesignSection = () => {
                                             </div>
                                             <div className="imgContainerLeftSide">
                                                 <img
-                                                    src={apiImage + item?.images[0]}
+                                                    src={item?.images[0]}
                                                     alt="atlantis kg"
                                                     onClick={() => {dispatch(getDesign2(item.id)); setSelectedImg2(null)}}
                                                 />

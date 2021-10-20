@@ -2,13 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="changed build second">
+      <change afterPath="$PROJECT_DIR$/public/images/loader2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/panoImage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Modal/ModalVr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/vr_image/_vr_image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loader/Animation/AnimationWIthJson.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loader/Animation/LottieAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Loader/Animation/file1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/_openModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/_openModal_reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/FetchedPosts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/MainLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/PostForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/redux/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/redux/appReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/redux/postsReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/redux/rootReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/redux/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/architecture.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.81fe2a73.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.81fe2a73.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.35cd9b86.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.35cd9b86.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.fcd8a118.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.fcd8a118.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.fcd8a118.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.6b336667.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/3.6b336667.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7629cb44.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7629cb44.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.ea2b2d7b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/runtime-main.ea2b2d7b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/Architecture.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/Architecture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/BackCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/BackCall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Building/Building.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/Building.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Design/Design.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/Design.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Gallery/Gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Gallery/Gallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ObjectById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ObjectById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Sections/categorySection.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/categorySection.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Loader/FullPageLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Loader/FullPageLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AccessWithBack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccessWithBack.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/building1_actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/building1_actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
     </list>
@@ -21,6 +77,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -43,10 +100,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/svg/objectInfo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../redux-course-2020" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,9 +113,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/public/svg/objectInfo" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/src/Components/store/reducer" />
       <recent name="$PROJECT_DIR$/src/Components/store/actions" />
     </key>
@@ -86,7 +144,11 @@
       <workItem from="1628154912123" duration="6758000" />
       <workItem from="1629190428976" duration="7863000" />
       <workItem from="1629539211491" duration="54970000" />
-      <workItem from="1630820291319" duration="3204000" />
+      <workItem from="1630820291319" duration="5318000" />
+      <workItem from="1632312078698" duration="38025000" />
+      <workItem from="1633685372132" duration="9041000" />
+      <workItem from="1633946029288" duration="725000" />
+      <workItem from="1634533298386" duration="18488000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>

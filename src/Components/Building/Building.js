@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from "react";
-import CategorySlider from "../Category/CategorySlider/CategorySlider";
-import SubCategories from "../Category/SubCategories";
 import BackCall from "../BackCall/BackCall";
 import Gallery from "../Gallery/Gallery";
 import CategoryDesc from "../Category/CategoryDesc";
@@ -12,7 +10,6 @@ import ObjectById from "../ObjectById";
 import ObjectInfo from "../ObjectInfo";
 
 const Building = () => {
-    const apiImage = new AccessWithBack()._apiBase
     const [objects, setObjects] = useState([])
     const dispatch = useDispatch()
     const getObjects = () => {
@@ -54,7 +51,7 @@ const Building = () => {
 
                     {
                         objects?.map((item, i) => (
-                            <div>
+                            <div key={i}>
                                 <ObjectById
                                     object={item}
                                 />
@@ -71,27 +68,6 @@ const Building = () => {
                                     <NavLink to={{pathname: "/architectureById/" + item?.id}}><span>Прочитать больше...</span></NavLink>
                                 </div>
                             </div>
-                            // <div className="col-lg-4 col-md-6 col-sm-12 subColTop" key={i}>
-                            //     <NavLink to={{
-                            //         pathname: "/architectureById/" + item.id
-                            //     }}>
-                            //         <div className="subTitle">
-                            //             {item.title}
-                            //         </div>
-                            //         <div className="subImage">
-                            //             <div className="imageDiv">
-                            //                 <img src={apiImage + item?.images[0]}
-                            //                      style={{
-                            //                          height: 355
-                            //                      }}
-                            //                 />
-                            //             </div>
-                            //             <div className="subImage2">
-                            //                 <img src={apiImage + item?.images[1]}/>
-                            //             </div>
-                            //         </div>
-                            //     </NavLink>
-                            // </div>
                         ))
                     }
                 </div>

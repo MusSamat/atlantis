@@ -6,6 +6,8 @@ import {useDispatch} from "react-redux";
 import {setloading} from "../../store/actions/laod_action";
 import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
+import {setOpenModal} from "../../store/actions/_openModal";
+import ModalVr from "../Modal/ModalVr";
 
 const ArchitectureById = (props) => {
     const apiImage = new AccessWithBack()._apiBase
@@ -19,6 +21,7 @@ const ArchitectureById = (props) => {
             setObject(res)
         })
     }
+
     function copy() {
         const el = document.createElement('input');
         el.value = window.location.href;
@@ -51,7 +54,8 @@ const ArchitectureById = (props) => {
                         year={object?.year}
                     />
                     <div className="copyButton">
-                        <button className="more" onClick={copy} style={{width: "4rem"}} title="Копировать ссылку"> <i className='fa fa-copy fa' style={{color: "white"}}></i></button>
+                        <button className="more" onClick={copy} style={{width: "4rem"}} title="Копировать ссылку"><i
+                            className='fa fa-copy fa' style={{color: "white"}}></i></button>
                     </div>
                 </div>
                 <div className="row" style={{
@@ -60,7 +64,7 @@ const ArchitectureById = (props) => {
                     <div className="col-12">
                         {
                             object?.images?.filter((img, i) => i === 0 ? img : null).map((img, i) => (
-                                <img src={apiImage + img} alt="atlantis kg" key={i}
+                                <img src={img} alt="atlantis kg" key={i}
                                      style={{margin: "0 auto"}}
                                 />
                             ))
@@ -69,15 +73,36 @@ const ArchitectureById = (props) => {
 
                     {
                         object?.images?.map((img, i) => (
-                            <div className="col-4 archImages">
-                                <img src={apiImage + img} alt="atlantis kg" key={i}
+                            <div className="col-4 archImages" key={i}>
+                                <img src={img} alt="atlantis kg"
                                      style={{margin: "0 auto"}}
                                 />
                             </div>
 
                         ))
                     }
-
+                    {
+                        object?.vr ?
+                            <>
+                                <div className="col-4 archImages">
+                                    <div className="vrMainDiv" onClick={() => {
+                                        dispatch(setOpenModal(true))
+                                    }}>
+                                        <img src={object.image1} alt="atlantis kg"
+                                             className="vrMainImage"
+                                             style={{margin: "0 auto"}}
+                                        />
+                                        <div className="vr_div">
+                                            <p>VR</p>
+                                        </div>
+                                    </div>
+                                    <ModalVr
+                                        obj={object}
+                                    />
+                                </div>
+                            </>
+                            : null
+                    }
 
                     <div>
 

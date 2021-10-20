@@ -57,14 +57,9 @@ const Gallery = () => {
                 >
                     {
                         object?.map((item, i) => (
-
-                            // <NavLink to={{
-                            //     pathname: "/buildingById/" + item.id
-                            // }}>
-                                <div className="gallery">
-                                    <img src={apiImage + item?.images[0]} alt="atlantis kg"/>
+                                <div className="gallery" key={i}>
+                                    <img src={item?.images[0]} alt="atlantis kg"/>
                                 </div>
-                            // </NavLink>
                         ))
                     }
                 </Carousels>

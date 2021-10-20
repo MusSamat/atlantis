@@ -1,16 +1,21 @@
 import React, {useEffect, useState} from "react";
+import "./../../vr_image/_vr_image.css"
 import "../design.css"
 import BackCall from "../../BackCall/BackCall";
 import AccessWithBack from "../../../service/AccessWithBack";
-import Carousels from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
+import {setOpenModal} from "../../../store/actions/_openModal";
+import ModalVr from "../../Modal/ModalVr";
+
 
 const DesignById = (props) => {
-    const apiImage = new AccessWithBack()._apiBase
+
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
+    const [modalItem, setModalItem] = useState({})
+    const openModal = useSelector(state => state.openModal.openModal)
     const dispatch = useDispatch()
     const getDesignById = () => {
         dispatch(setloading(true))
@@ -20,30 +25,12 @@ const DesignById = (props) => {
         })
     }
 
+
     useEffect(() => {
         getDesignById()
         window.scrollTo(0, 0)
-    }, [])
 
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: {max: 4000, min: 3000},
-            items: 3
-        },
-        desktop: {
-            breakpoint: {max: 3000, min: 1024},
-            items: 3
-        },
-        tablet: {
-            breakpoint: {max: 1024, min: 464},
-            items: 2
-        },
-        mobile: {
-            breakpoint: {max: 464, min: 0},
-            items: 1
-        }
-    };
+    }, [])
 
     return (
         <div className="page">
@@ -66,10 +53,11 @@ const DesignById = (props) => {
                             {item?.images.map((img, index) => (
                                 <div className="col-4 designByIdDiv"
                                      key={index}
+                                     // onClick={() => (console.log(item))}
                                 >
 
                                     <img
-                                        src={apiImage + img}
+                                        src={img}
                                         alt="atlantis kg"
                                     />
                                     {
@@ -78,17 +66,48 @@ const DesignById = (props) => {
                                                 <p>
                                                     {item.name}
                                                 </p>
-                                            </div>:
+                                            </div> :
                                             null
                                     }
                                 </div>
 
                             ))}
+
+                            {
+                                item?.vr ?
+                                    <div className="col-4 designByIdDiv" key={i}>
+                                        <div className="vrMainDiv" onClick={() => {
+                                            setModalItem(item)
+                                            dispatch(setOpenModal(true));
+                                        }}>
+                                            {
+                                                item.images?.filter((items, i) => i === 0 ? items : null).map(items => (
+                                                        <img src={items} alt="atlantis kg"
+                                                             className="vrMainImage"
+                                                             style={{margin: "0 auto"}}
+                                                        />
+                                                    )
+                                                )
+
+                                            }
+                                            <div className="vr_div">
+                                                <p>VR</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    : null
+                            }
                         </>
 
                     ))
                 }
             </div>
+            {
+                openModal && <ModalVr
+                    obj={modalItem}
+                />
+            }
             <BackCall/>
         </div>
     )

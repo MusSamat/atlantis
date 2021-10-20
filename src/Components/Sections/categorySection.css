@@ -76,7 +76,7 @@ img {
 .imageTitle {
     color: #033f7f;
     font-family: Montserrat;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 32px;
@@ -91,6 +91,7 @@ img {
     color: #033f7f;
     padding-left: 3px;
     margin-bottom: 32px;
+    font-weight: 500;
 }
 
 .imgContainerLeftSide {

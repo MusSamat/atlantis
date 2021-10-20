@@ -57,7 +57,7 @@ const ArchitectureSection = () => {
 
                             {
                                 object?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                    <img src={selectedImg ? apiImage + selectedImg : apiImage + image}
+                                    <img src={selectedImg ? selectedImg : image}
                                          alt="atlantis kg"
                                          key={i}/>
                                 ))
@@ -80,31 +80,13 @@ const ArchitectureSection = () => {
                                     <div className="selectedImages">
                                         <img
                                             style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}
-                                            src={apiImage + img}
+                                            src={img}
                                             alt="atlantis kg"
                                             onClick={() => setSelectedImg(img)}
                                         />
                                     </div>
                                 </div>
                             ))}
-                            {/*{object?.images?.filter((img, i) => i < 1 && selectedImg !== img ? img : null).map((img, index) => (*/}
-                            {/*    <div*/}
-                            {/*        style={{*/}
-                            {/*            marginTop: 20,*/}
-                            {/*            padding: "0 !important"*/}
-                            {/*        }}*/}
-                            {/*        key={index}>*/}
-
-                            {/*        <div className="selectedImages">*/}
-                            {/*            <img*/}
-                            {/*                style={{border: selectedImg === img ? "1px solid #033F7F" : ""}}*/}
-                            {/*                src={apiImage + img}*/}
-                            {/*                alt="atlantis kg"*/}
-                            {/*                onClick={() => setSelectedImg(img)}*/}
-                            {/*            />*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*))}*/}
                         </div>
                         <div className="objectInfo">
                            <ObjectInfo
@@ -135,7 +117,7 @@ const ArchitectureSection = () => {
                                     </div>
                                     <div className="imgContainerLeftSide">
                                         <img
-                                            src={apiImage + item?.images[0]}
+                                            src={item?.images[0]}
                                             alt="atlantis kg"
                                             onClick={() =>{ dispatch(getArchitecture1(item.id)); setSelectedImg(null)}}
                                         />
@@ -158,7 +140,7 @@ const ArchitectureSection = () => {
 
                                 {
                                     object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                        <img src={selectedImg2 ? apiImage + selectedImg2 : apiImage + image}
+                                        <img src={selectedImg2 ? selectedImg2 : image}
                                              alt="atlantis kg"
                                              key={i}/>
                                     ))
@@ -181,7 +163,7 @@ const ArchitectureSection = () => {
                                         <div className="selectedImages">
                                             <img
                                                 style={{border: selectedImg2 === img ? "1px solid #033F7F" : ""}}
-                                                src={apiImage + img}
+                                                src={img}
                                                 alt="atlantis kg"
                                                 onClick={() => setSelectedImg2(img)}
                                             />
@@ -218,7 +200,7 @@ const ArchitectureSection = () => {
                                         </div>
                                         <div className="imgContainerLeftSide">
                                             <img
-                                                src={apiImage + item?.images[0]}
+                                                src={item?.images[0]}
                                                 alt="atlantis kg"
                                                 onClick={() => {dispatch(getArchitecture2(item.id)); setSelectedImg2(null)}}
                                             />

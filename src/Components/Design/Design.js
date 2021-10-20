@@ -53,29 +53,9 @@ const Design = () => {
                     {
                         objects?.map((item, i) => (
                             <ObjectById
+                                key={i}
                                 object={item}
                             />
-                            // <div className="col-lg-4 col-md-6 col-sm-12 subColTop" key={i}>
-                            //     <NavLink to={{
-                            //         pathname: "/architectureById/" + item.id
-                            //     }}>
-                            //         <div className="subTitle">
-                            //             {item.title}
-                            //         </div>
-                            //         <div className="subImage">
-                            //             <div className="imageDiv">
-                            //                 <img src={apiImage + item?.images[0]}
-                            //                      style={{
-                            //                          height: 355
-                            //                      }}
-                            //                 />
-                            //             </div>
-                            //             <div className="subImage2">
-                            //                 <img src={apiImage + item?.images[1]}/>
-                            //             </div>
-                            //         </div>
-                            //     </NavLink>
-                            // </div>
                         ))
                     }
                 </div>

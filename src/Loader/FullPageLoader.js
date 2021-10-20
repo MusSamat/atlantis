@@ -1,11 +1,12 @@
 import React from "react";
 import "./Loader.css"
+import AnimationWithJson from "./Animation/AnimationWIthJson";
 
 export const FullPageLoader = () => {
-    return(
+    return (
         <div className="loader-container">
             <div className="div loader">
-                <img src="/images/loader.svg" alt="loader"/>
+                <AnimationWithJson/>
             </div>
         </div>
     )

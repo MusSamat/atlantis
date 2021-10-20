@@ -7,9 +7,13 @@ import "./building.css"
 import Gallery from "../Gallery/Gallery";
 import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
+import "./../vr_image/_vr_image.css"
+import ModalVr from "../Modal/ModalVr";
+import {setOpenModal} from "../../store/actions/_openModal";
 
 
 const BuildingById = (props) => {
+
     const apiImage = new AccessWithBack()._apiBase
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
@@ -31,6 +35,13 @@ const BuildingById = (props) => {
         document.body.removeChild(el);
         toast.success("Ссылка скопировано")
     }
+
+    // const openModalWindow = (b) => {
+    //     setOpenModal(b);
+    //     return(
+    //         <ModalVr open={openModal}/>
+    //     )
+    // }
 
     useEffect(() => {
         getArchitectureById()
@@ -54,7 +65,8 @@ const BuildingById = (props) => {
                         year={object?.year}
                     />
                     <div className="copyButton">
-                        <button className="more" onClick={copy} style={{width: "4rem"}} title="Копировать ссылку"> <i className='fa fa-copy fa' style={{color: "white"}}></i></button>
+                        <button className="more" onClick={copy} style={{width: "4rem"}} title="Копировать ссылку"><i
+                            className='fa fa-copy fa' style={{color: "white"}}></i></button>
                     </div>
                 </div>
                 <div className="row" style={{
@@ -63,7 +75,7 @@ const BuildingById = (props) => {
                     <div className="col-12">
                         {
                             object?.images?.filter((img, i) => i === 0 ? img : null).map((img, i) => (
-                                <img src={apiImage + img} alt="atlantis kg" key={i}
+                                <img src={img} alt="atlantis kg" key={i}
                                      style={{margin: "0 auto"}}
                                 />
                             ))
@@ -72,39 +84,37 @@ const BuildingById = (props) => {
                     <div className="row">
                         {
                             object?.images?.map((img, i) => (
-                                <div className="col-4 archImages">
-                                    <img src={apiImage + img} alt="atlantis kg" key={i}/>
+                                <div className="col-4 archImages" key={i}>
+                                    <img src={img} alt="atlantis kg" />
                                 </div>
 
                             ))
                         }
+                        {
+                            object?.vr ?
+                                <>
+                                    <div className="col-4 archImages">
+                                        <div className="vrMainDiv" onClick={() => {
+                                            dispatch(setOpenModal(true))
+                                        }}>
+                                            <img src={object.image1} alt="atlantis kg"
+                                                 className="vrMainImage"
+                                                 style={{margin: "0 auto"}}
+                                            />
+                                            <div className="vr_div">
+                                                <p>VR</p>
+                                            </div>
+                                        </div>
+                                        <ModalVr
+                                            obj={object}
+                                        />
+                                    </div>
+                                </>
+                                : null
+                        }
                     </div>
 
                 </div>
-                {/*<div>*/}
-                {/*    <div className="advantageTitle">{object.advantage}</div>*/}
-                {/*    <div className="row" style={{*/}
-                {/*        marginTop: 60*/}
-                {/*    }}>*/}
-                {/*        {*/}
-                {/*            object?.icons?.map((item, i) => (*/}
-                {/*                <div className="col-lg-4 col-md-2 col-sm-12" style={{*/}
-                {/*                    padding: 15*/}
-                {/*                }}>*/}
-                {/*                    <div className="iconsImage">*/}
-                {/*                        <img src={apiImage + item.images} alt="atlantis kg" key={i}*/}
-                {/*                             style={{margin: "0 auto"}}*/}
-                {/*                        />*/}
-                {/*                    </div>*/}
-                {/*                    <div className="iconTitle">*/}
-                {/*                        {item.name}*/}
-                {/*                    </div>*/}
-
-                {/*                </div>*/}
-                {/*            ))*/}
-                {/*        }*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </div>
 
 

@@ -32,8 +32,6 @@ export default function MainBanner() {
         })
     }
 
-
-
     useEffect(() => {
         getObject()
 
@@ -48,12 +46,13 @@ export default function MainBanner() {
                     <div className="mainBanner">
                         {
                             images?.filter((img, i) => i < 1 ? img : null).map((image, i) => (
-                                <NavLink to={{
+                                <NavLink
+                                    key={i}
+                                    to={{
                                     pathname: slug + "/" + object.id
                                 }}>
-                                    <img src={selectedImg ? apiImage + selectedImg : apiImage + image} alt="atlantis kg"
-                                         title="Посмотреть"
-                                         key={i}/>
+                                    <img src={selectedImg ?  selectedImg : image} alt="atlantis kg"
+                                         title="Посмотреть"/>
                                 </NavLink>
                             ))
                         }
@@ -74,7 +73,7 @@ export default function MainBanner() {
                                         <img
                                             style={{ border: selectedImg === img ? "1px solid purple" : "" }}
                                             key={index}
-                                            src={apiImage + img}
+                                            src={img}
                                             alt="atlantis kg"
                                             onClick={() => setSelectedImg(img)}
                                         />
@@ -87,14 +86,17 @@ export default function MainBanner() {
                                 <div className="main_rightImageFirst">
                                     {
                                         images?.filter((img, i) => i === 1 ? img : null).map((img, i) => (
-                                            <img src={apiImage + img} alt="atlantis"/>
+                                            <img src={img} alt="atlantis"
+                                            key={i}/>
                                         ))
                                     }
                                 </div>
                                 <div className="main_rightImageSecond">
                                     {
                                         images?.filter((img, i) => i === 2 ? img : null).map((img, i) => (
-                                            <img src={apiImage + img} alt="atlantis"/>
+                                            <img src={img} alt="atlantis"
+                                                key={i}
+                                            />
                                         ))
                                     }
                                 </div>

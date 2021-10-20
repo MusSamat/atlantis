@@ -1,22 +1,14 @@
 import React, {useEffect, useState} from "react";
 import "./Sliders/ mainBanner/mainBanner.css";
-
-import AccessWithBack from "../service/AccessWithBack";
 import {NavLink} from "react-router-dom";
 
 
 const ObjectById = (props) => {
-    console.log(props.object)
+
     const object = props.object
-    console.log(object)
-    const apiImage = new AccessWithBack()._apiBase
     const [selectedImg, setSelectedImg] = useState();
-    const [images, setImages] = useState([])
-    console.log(images)
     const [title, setTitle] = useState()
     const [slug, setSlug] = useState()
-    const [image5, setImage5] = useState([])
-    console.log(image5)
 
     const getCategory = () => {
         if (object?.category === 1) {
@@ -31,9 +23,8 @@ const ObjectById = (props) => {
 
     useEffect(() => {
         getCategory()
-        setImages(object.images)
         setTitle(object.title)
-        setImage5(object.image5)
+
     }, [])
 
     return (

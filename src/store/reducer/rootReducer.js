@@ -7,6 +7,7 @@ import fetch_building2 from "./building2_reducer";
 import fetch_design1 from "./design1_reducer";
 import fetch_design2 from "./design2_reducer";
 import fetch_buildingItems from "./buildingSectionReducer";
+import openModalReducer from "./_openModal_reducer";
 
 export default combineReducers({
     load: loadreducer,
@@ -16,5 +17,6 @@ export default combineReducers({
     build2: fetch_building2,
     design1: fetch_design1,
     design2: fetch_design2,
-    buildingItems: fetch_buildingItems
+    buildingItems: fetch_buildingItems,
+    openModal: openModalReducer
 })

@@ -3,7 +3,6 @@ import {toast} from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import 'react-phone-input-2/lib/style.css'
 import "./backCall.css"
-import {setBackCall} from "../../service/setCallBack";
 import AccessWithBack from "../../service/AccessWithBack";
 
 
@@ -12,16 +11,21 @@ const BackCall = () => {
     const [phoneNumber, setPhoneNumber] = useState()
 
     const setCallBack = () => {
-        let body = JSON.stringify(
-            {
-                name: name,
-                phone: phoneNumber,
-            }
-        )
-        new AccessWithBack().setData("/api/backcall/", body).then(() => {
-            document.getElementById('nameInput').value=" "
-            toast.success("Ваша команда успешно выполнено!")
-        })
+        if( name !== null && phoneNumber.length > 11){
+            let body = JSON.stringify(
+                {
+                    name: name,
+                    phone: phoneNumber,
+                }
+            )
+            new AccessWithBack().setData("/api/backcall/", body).then(() => {
+                document.getElementById('nameInput').value=" "
+                setPhoneNumber(null)
+                toast.success("Ваша команда успешно выполнено!")
+            })
+        }else{
+            toast.error("Проверьте в правильности")
+        }
     }
     return (
         <div className='page'>
@@ -56,7 +60,12 @@ const BackCall = () => {
                             width: 450
                         }}>
                             <PhoneInput
-                                country={'kg'}
+                                country="kg"
+                                defaultCountry="kg"
+                                onlyCountries={['kg', 'kz', 'ru']}
+                                masks={{kg: '(...) ..-..-..', kz: '(....) ...-....'}}
+                                priority={{kg: 0, ru: 1, kz: 2}}
+                                value={phoneNumber}
                                 onChange={phoneNumber => setPhoneNumber(phoneNumber)}
                             />
                         </div>
