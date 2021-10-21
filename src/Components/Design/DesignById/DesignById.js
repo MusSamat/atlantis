@@ -3,7 +3,6 @@ import "./../../vr_image/_vr_image.css"
 import "../design.css"
 import BackCall from "../../BackCall/BackCall";
 import AccessWithBack from "../../../service/AccessWithBack";
-import "react-multi-carousel/lib/styles.css";
 import {useDispatch, useSelector} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
 import {setOpenModal} from "../../../store/actions/_openModal";
