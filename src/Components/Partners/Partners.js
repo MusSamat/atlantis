@@ -9,6 +9,7 @@ import {setloading} from "../../store/actions/laod_action";
 
 const Partners = () => {
 
+
     const [partners, setPartners] = useState([])
     const dispatch = useDispatch()
 
