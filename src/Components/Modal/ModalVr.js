@@ -14,7 +14,7 @@ const ModalVr = (props) => {
 
     useEffect(() => {
         openModal ? document.body.style.overflow = 'hidden' :
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'unset';
     },[])
     console.log(openModal)
     return(
