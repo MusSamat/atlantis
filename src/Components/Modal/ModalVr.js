@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {Modal} from "antd";
 import 'antd/dist/antd.css';
+import {Modal} from "antd";
 import VrImage from "../vr_image/VrImage";
 import "./../vr_image/_vr_image.css"
 import {useDispatch, useSelector} from "react-redux";
@@ -26,6 +26,7 @@ const ModalVr = (props) => {
                            onCancel={() => dispatch(setOpenModal(false))}
                            width={898}
                             footer={null}
+                    htmlOpenClassName="overflow-hidden"
             >
                 <VrImage
                     obj={obj}
