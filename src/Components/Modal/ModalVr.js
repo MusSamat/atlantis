@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import 'antd/dist/antd.css';
 import {Modal} from "antd";
 import VrImage from "../vr_image/VrImage";
@@ -11,22 +11,24 @@ const ModalVr = (props) => {
     const obj = props.obj
     const dispatch = useDispatch()
     const openModal = useSelector(state => state.openModal.openModal)
+
+    useEffect(() => {
+        openModal ? document.body.style.overflow = 'hidden' :
+            document.body.style.overflow = 'hidden';
+    },[])
     console.log(openModal)
     return(
         <div>
                 <Modal
-                    bodyStyle={{ height: "598px",
+                    bodyStyle={{
+                        height: "598px",
                         padding: 0,
                         border: "1px solid white",
-                        overflowY: "hidden",
                     }}
                            centered
                            visible={openModal}
-                           onOk={() => dispatch(setOpenModal(false))}
-                           onCancel={() => dispatch(setOpenModal(false))}
                            width={898}
                             footer={null}
-                    htmlOpenClassName="overflow-hidden"
             >
                 <VrImage
                     obj={obj}
