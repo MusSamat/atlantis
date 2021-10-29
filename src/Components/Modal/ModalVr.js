@@ -17,7 +17,8 @@ const ModalVr = (props) => {
                 <Modal
                     bodyStyle={{ height: "598px",
                         padding: 0,
-                        border: "1px solid white"
+                        border: "1px solid white",
+                        overflowY: "hidden",
                     }}
                            centered
                            visible={openModal}
