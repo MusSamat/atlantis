@@ -2,11 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="changed build second">
+      <change afterPath="$PROJECT_DIR$/public/svg/log.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/Contact/Location.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.fa65d772.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/static/js/main.fa65d772.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/log.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Building/Building.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/Building.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Modal/ModalVr.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Modal/ModalVr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ObjectById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ObjectById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/ArchitectureSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/BuildingSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sections/DesignSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/vr_image/_vr_image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/vr_image/_vr_image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/_openModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/vrObject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/_openModal_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/vrObject_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +78,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,7 +118,11 @@
       <workItem from="1632312078698" duration="38025000" />
       <workItem from="1633685372132" duration="9041000" />
       <workItem from="1633946029288" duration="725000" />
-      <workItem from="1634533298386" duration="30052000" />
+      <workItem from="1634533298386" duration="41298000" />
+      <workItem from="1635851781332" duration="193000" />
+      <workItem from="1635911299279" duration="1912000" />
+      <workItem from="1635960462975" duration="367000" />
+      <workItem from="1636368681143" duration="19062000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>

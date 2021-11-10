@@ -5,16 +5,14 @@ import BackCall from "../../BackCall/BackCall";
 import AccessWithBack from "../../../service/AccessWithBack";
 import {useDispatch, useSelector} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
-import {setOpenModal} from "../../../store/actions/_openModal";
-import ModalVr from "../../Modal/ModalVr";
+import {NavLink} from "react-router-dom";
+import {setVrObject} from "../../../store/actions/vrObject";
 
 
 const DesignById = (props) => {
 
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
-    const [modalItem, setModalItem] = useState({})
-    const openModal = useSelector(state => state.openModal.openModal)
     const dispatch = useDispatch()
     const getDesignById = () => {
         dispatch(setloading(true))
@@ -52,7 +50,6 @@ const DesignById = (props) => {
                             {item?.images.map((img, index) => (
                                 <div className="col-4 designByIdDiv"
                                      key={index}
-                                     // onClick={() => (console.log(item))}
                                 >
 
                                     <img
@@ -74,26 +71,29 @@ const DesignById = (props) => {
 
                             {
                                 item?.vr ?
-                                    <div className="col-4 designByIdDiv" key={i}>
-                                        <div className="vrMainDiv" onClick={() => {
-                                            setModalItem(item)
-                                            dispatch(setOpenModal(true));
-                                        }}>
-                                            {
-                                                item.images?.filter((items, i) => i === 0 ? items : null).map(items => (
-                                                        <img src={items} alt="atlantis kg"
-                                                             className="vrMainImage"
-                                                             style={{margin: "0 auto"}}
-                                                        />
+                                        <div className="col-4 designByIdDiv" >
+                                            <NavLink to="/vr-image" key={i}>
+                                            <div className="vrMainDiv" onClick={() => {
+                                                // setModalItem(item)
+                                                // dispatch(setOpenModal(true));
+                                                dispatch(setVrObject(item))
+                                            }}>
+                                                {
+                                                    item.images?.filter((items, i) => i === 0 ? items : null).map(items => (
+                                                            <img src={items} alt="atlantis kg"
+                                                                 className="vrMainImage"
+                                                                 style={{margin: "0 auto"}}
+                                                            />
+                                                        )
                                                     )
-                                                )
 
-                                            }
-                                            <div className="vr_div">
-                                                <p>VR</p>
-                                            </div>
+                                                }
+                                                <div className="vr_div">
+                                                    <p>VR</p>
+                                                </div>
+                                            </div>       </NavLink>
                                         </div>
-                                    </div>
+
 
                                     : null
                             }
@@ -102,11 +102,6 @@ const DesignById = (props) => {
                     ))
                 }
             </div>
-            {
-                openModal && <ModalVr
-                    obj={modalItem}
-                />
-            }
             <BackCall/>
         </div>
     )

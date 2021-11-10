@@ -3,6 +3,11 @@ import {NavLink} from "react-router-dom";
 import "./_header.css"
 
 const Header = () => {
+
+    const activeLinkStyle = {
+        color: "#033F7F",
+        // borderBottom: "2px solid #033F7F"
+    }
     return (
         <>
 
@@ -18,7 +23,7 @@ const Header = () => {
                 <div className="headerN">
                    <NavLink to="/" exact={true}>
                        <div className="logo">
-                           <img src="/images/log.png" alt="atlantis kg"/>
+                           <img src="/images/log.png" alt="atlantis kg" width={105} height={115}/>
                        </div>
                    </NavLink>
                     <div style={{
@@ -27,52 +32,40 @@ const Header = () => {
                         <ul className="menuList">
                             <NavLink to="/"
                                      exact={true}
-                                     activeStyle={{
-                                         color: "#679ED8",
-                                     }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>Главная</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/architecture"
-                                     activeStyle={{
-                                         color: "#679ED8",
-                                     }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>Архитектура</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/building"
-                                     activeStyle={{
-                                         color: "#679ED8",
-                                     }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>Строительство</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/design"
                                      exact={true}
-                                     activeStyle={{
-                                         color: "#679ED8",
-                                     }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>Дизайн</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/about"
                                      exact={true}
-                                     activeStyle={{
-                                         color: "#679ED8",
-                                     }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>О нас</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/contact"
                                      exact={true}
-                                activeStyle={{
-                                    color: "#679ED8",
-                                }}
+                                     activeStyle={activeLinkStyle}
                             >
                                 <li>Контакты</li>
                             </NavLink>

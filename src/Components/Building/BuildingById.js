@@ -9,12 +9,12 @@ import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
 import "./../vr_image/_vr_image.css"
 import ModalVr from "../Modal/ModalVr";
-import {setOpenModal} from "../../store/actions/_openModal";
+import {NavLink} from "react-router-dom";
+import {setVrObject} from "../../store/actions/vrObject";
 
 
 const BuildingById = (props) => {
 
-    const apiImage = new AccessWithBack()._apiBase
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
     const dispatch = useDispatch()
@@ -35,13 +35,6 @@ const BuildingById = (props) => {
         document.body.removeChild(el);
         toast.success("Ссылка скопировано")
     }
-
-    // const openModalWindow = (b) => {
-    //     setOpenModal(b);
-    //     return(
-    //         <ModalVr open={openModal}/>
-    //     )
-    // }
 
     useEffect(() => {
         getArchitectureById()
@@ -94,20 +87,20 @@ const BuildingById = (props) => {
                             object?.vr ?
                                 <>
                                     <div className="col-4 archImages">
-                                        <div className="vrMainDiv" onClick={() => {
-                                            dispatch(setOpenModal(true))
-                                        }}>
-                                            <img src={object.image1} alt="atlantis kg"
-                                                 className="vrMainImage"
-                                                 style={{margin: "0 auto"}}
-                                            />
-                                            <div className="vr_div">
-                                                <p>VR</p>
+                                        <NavLink to="/vr-image">
+                                            <div className="vrMainDiv" onClick={() => {
+                                                dispatch(setVrObject(object))
+                                            }}>
+                                                <img src={object.image1} alt="atlantis kg"
+                                                     className="vrMainImage"
+                                                     style={{margin: "0 auto"}}
+                                                />
+                                                <div className="vr_div">
+                                                    <p>VR</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <ModalVr
-                                            obj={object}
-                                        />
+                                        </NavLink>
+
                                     </div>
                                 </>
                                 : null

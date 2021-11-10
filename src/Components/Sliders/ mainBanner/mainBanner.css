@@ -49,11 +49,10 @@ img {
     position: absolute;
     left: 0;
     top: 333px;
-    width: 330px;
+    min-width: 330px;
     height: 49px;
     background-color: rgba(255,255,255, 0.62);
-    padding-left: 10px;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .mainBanner .objectTitle p{

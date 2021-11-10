@@ -41,7 +41,7 @@ const Building = () => {
                 marginBottom: 50
             }}>
                 <div className="ArchitectureTitle">
-                    Архитектура
+                    Строительство
                 </div>
                 <div className="row"
                      style={{

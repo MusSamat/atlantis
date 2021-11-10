@@ -24,7 +24,6 @@ const ObjectById = (props) => {
     useEffect(() => {
         getCategory()
         setTitle(object.title)
-
     }, [])
 
     return (
@@ -74,12 +73,20 @@ const ObjectById = (props) => {
                             <div className="col-6" style={{
                                 padding: 0
                             }}>
-                                <div className="main_rightImageFirst">
-                                    <img src={object.image5} alt="atlantis"/>
-                                </div>
-                                <div className="main_rightImageSecond">
-                                    <img src={object.image6} alt="atlantis"/>
-                                </div>
+                                <NavLink to={{
+                                    pathname: slug + "/" + object.id
+                                }}>
+                                    <div className="main_rightImageFirst">
+                                        <img src={object.image5} alt="atlantis"/>
+                                    </div>
+                                </NavLink>
+                                <NavLink to={{
+                                    pathname: slug + "/" + object.id
+                                }}>
+                                    <div className="main_rightImageSecond">
+                                        <img src={object.image6} alt="atlantis"/>
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

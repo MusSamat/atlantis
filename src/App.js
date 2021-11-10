@@ -17,6 +17,7 @@ import DesignById from "./Components/Design/DesignById/DesignById";
 import ArchitectureById from "./Components/Architecture/ArchitectureById";
 import BuildingById from "./Components/Building/BuildingById";
 import {FullPageLoader} from "./Loader/FullPageLoader";
+import VrImage from "./Components/vr_image/VrImage";
 function App() {
 
     const load = useSelector(state => state.load.load)
@@ -36,6 +37,7 @@ function App() {
             <Route exact={true} path={"/designById/:id"} component={DesignById}/>
             <Route exact={true} path={"/architectureById/:id"} component={ArchitectureById}/>
             <Route exact={true} path={"/buildingById/:id"} component={BuildingById}/>
+            <Route exact={true} path={"/vr-image"} component={VrImage}/>
         </Switch>
         <Footer/>
         {load ? <FullPageLoader/> : null}

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import "./categorySection.css"
-import AccessWithBack from "../../service/AccessWithBack";
 import {NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {getBuilding1} from "../../store/actions/building1_actions";
@@ -9,9 +8,8 @@ import ObjectInfo from "../ObjectInfo";
 import {getBuildingSectionItems} from "../../store/actions/buildingSection_action";
 
 
-
 const BuildingSection = () => {
-    const apiImage = new AccessWithBack()._apiBase
+
     const dispatch = useDispatch()
     const objects = useSelector(state => state.buildingItems.buildingItems)
     const object = useSelector(state => state.build1.build1)
@@ -37,19 +35,21 @@ const BuildingSection = () => {
 
                 <div className="categorySection">
                     <div>
-                        <div className="objectTitle1" >
-                            {object?.title}
-                        </div>
-                        <div className="mainImage">
+                        <NavLink to={{pathname: "/buildingById/" + object?.id}}>
+                            <div className="objectTitle1">
+                                {object?.title}
+                            </div>
+                            <div className="mainImage">
 
-                            {
-                                object?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                    <img src={selectedImg ? selectedImg : image}
-                                         alt="atlantis kg"
-                                         key={i}/>
-                                ))
-                            }
-                        </div>
+                                {
+                                    object?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
+                                        <img src={selectedImg ? selectedImg : image}
+                                             alt="atlantis kg"
+                                             key={i}/>
+                                    ))
+                                }
+                            </div>
+                        </NavLink>
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
@@ -83,8 +83,11 @@ const BuildingSection = () => {
                                 year={object?.year}
                             />
                             <div className="moreInfo">
-                                <NavLink to={{pathname: "/architectureById/" + object?.id}}><span>Прочитать больше...</span></NavLink>
-                                <NavLink to="/architecture"><button className="more" style={{marginRight: 20}}> Больше объектов</button></NavLink>
+                                <NavLink
+                                    to={{pathname: "/architectureById/" + object?.id}}><span>Прочитать больше...</span></NavLink>
+                                <NavLink to="/architecture">
+                                    <button className="more" style={{marginRight: 20}}> Больше объектов</button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -94,19 +97,24 @@ const BuildingSection = () => {
                         }}>
                             {objects?.filter((item, i) => item.id !== object?.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
-                                    <div className="imageTitle"
-                                         key={index}
-                                         title={item.title}
-                                         style={{
-                                             textAlign: "center"
-                                         }}
-                                    >{item.title.substring(0, 40)}...
-                                    </div>
+                                    <NavLink to={{pathname: "/buildingById/" + item?.id}}>
+                                        <div className="imageTitle"
+                                             key={index}
+                                             title={item.title}
+                                             style={{
+                                                 textAlign: "center"
+                                             }}
+                                        >{item.title.substring(0, 40)}...
+                                        </div>
+                                    </NavLink>
                                     <div className="imgContainerLeftSide">
                                         <img
                                             src={item?.images[0]}
                                             alt="atlantis kg"
-                                            onClick={() => {dispatch(getBuilding1(item.id)); setSelectedImg(null)}}
+                                            onClick={() => {
+                                                dispatch(getBuilding1(item.id));
+                                                setSelectedImg(null)
+                                            }}
                                         />
                                     </div>
                                 </>
@@ -120,26 +128,27 @@ const BuildingSection = () => {
                     objects?.length > 4 ?
                         <div className="categorySection">
                             <div>
-                                <div className="objectTitle1" >
-                                    {object2?.title}
-                                </div>
-                                <div className="mainImage">
-
-                                    {
-                                        object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
-                                            <img src={selectedImg2 ?  selectedImg2 : image}
-                                                 alt="atlantis kg"
-                                                 key={i}/>
-                                        ))
-                                    }
-                                </div>
+                                <NavLink to={{pathname: "/buildingById/" + object2?.id}}>
+                                    <div className="objectTitle1">
+                                        {object2?.title}
+                                    </div>
+                                    <div className="mainImage">
+                                        {
+                                            object2?.images?.filter((img, i) => i === 0 ? img : null).map((image, i) => (
+                                                <img src={selectedImg2 ? selectedImg2 : image}
+                                                     alt="atlantis kg"
+                                                     key={i}/>
+                                            ))
+                                        }
+                                    </div>
+                                </NavLink>
                                 <div style={{
                                     display: "flex",
                                     flexDirection: "row",
                                     justifyContent: "space-between",
                                     marginRight: 20
                                 }}>
-                                    {object2?.images?.filter((img, i) => i < 4 ).map((img, index) => (
+                                    {object2?.images?.filter((img, i) => i < 4).map((img, index) => (
                                         <div
                                             style={{
                                                 marginTop: 20,
@@ -152,7 +161,7 @@ const BuildingSection = () => {
                                                     style={{border: selectedImg2 === img ? "1px solid #033F7F" : ""}}
                                                     src={img}
                                                     alt="atlantis kg"
-                                                    onClick={() => setSelectedImg2(img) }
+                                                    onClick={() => setSelectedImg2(img)}
                                                 />
                                             </div>
                                         </div>
@@ -167,7 +176,9 @@ const BuildingSection = () => {
                                     />
                                     <div className="moreInfo">
                                         <NavLink to={{pathname: "/buildingById/" + object2?.id}}><span>Прочитать больше...</span></NavLink>
-                                        <NavLink to="/building"><button className="more" style={{marginRight: 20}}> Больше объектов</button></NavLink>
+                                        <NavLink to="/building">
+                                            <button className="more" style={{marginRight: 20}}> Больше объектов</button>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -177,26 +188,31 @@ const BuildingSection = () => {
                                 }}>
                                     {objects?.filter((item, i) => item.id !== object2?.id && i > 3 ? item : null).map((item, index) => (
                                         <>
-                                            <div className="imageTitle"
-                                                 key={index}
-                                                 title={item.title}
-                                                 style={{
-                                                     textAlign: "center"
-                                                 }}
-                                            >{item.title.substring(0, 40)}...
-                                            </div>
+                                            <NavLink to={{pathname: "/buildingById/" + item?.id}}>
+                                                <div className="imageTitle"
+                                                     key={index}
+                                                     title={item.title}
+                                                     style={{
+                                                         textAlign: "center"
+                                                     }}
+                                                >{item.title.substring(0, 40)}...
+                                                </div>
+                                            </NavLink>
                                             <div className="imgContainerLeftSide">
                                                 <img
                                                     src={item?.images[0]}
                                                     alt="atlantis kg"
-                                                    onClick={() => {dispatch(getBuilding2(item.id)); setSelectedImg2(null)}}
+                                                    onClick={() => {
+                                                        dispatch(getBuilding2(item.id));
+                                                        setSelectedImg2(null)
+                                                    }}
                                                 />
                                             </div>
                                         </>
                                     ))}
                                 </div>
                             </div>
-                        </div>:
+                        </div> :
                         null
                 }
 
