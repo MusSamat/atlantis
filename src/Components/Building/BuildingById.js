@@ -8,7 +8,6 @@ import Gallery from "../Gallery/Gallery";
 import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
 import "./../vr_image/_vr_image.css"
-import ModalVr from "../Modal/ModalVr";
 import {NavLink} from "react-router-dom";
 import {setVrObject} from "../../store/actions/vrObject";
 

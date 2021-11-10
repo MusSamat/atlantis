@@ -6,8 +6,7 @@ import {useDispatch} from "react-redux";
 import {setloading} from "../../store/actions/laod_action";
 import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
-import {setOpenModal, setVrObject} from "../../store/actions/vrObject";
-import ModalVr from "../Modal/ModalVr";
+import { setVrObject} from "../../store/actions/vrObject";
 import {NavLink} from "react-router-dom";
 
 const ArchitectureById = (props) => {

@@ -5,8 +5,7 @@ import "./_header.css"
 const Header = () => {
 
     const activeLinkStyle = {
-        color: "#033F7F",
-        // borderBottom: "2px solid #033F7F"
+        color: "#679ED8",
     }
     return (
         <>
