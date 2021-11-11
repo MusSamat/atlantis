@@ -8,6 +8,7 @@ import ObjectInfo from "../ObjectInfo";
 import {toast} from "react-toastify";
 import { setVrObject} from "../../store/actions/vrObject";
 import {NavLink} from "react-router-dom";
+import Lightbox from "react-image-lightbox";
 
 const ArchitectureById = (props) => {
 
@@ -31,6 +32,11 @@ const ArchitectureById = (props) => {
         document.body.removeChild(el);
         toast.success("Ссылка скопировано")
     }
+
+    // LightBox image carousel
+    const sliderImages = object?.images
+    const [isOpen, setOpen] = useState(false)
+    const [imageIndex, setImageIndex] = useState(0)
 
     useEffect(() => {
         getArchitectureById()
@@ -74,8 +80,8 @@ const ArchitectureById = (props) => {
                     {
                         object?.images?.map((img, i) => (
                             <div className="col-4 archImages" key={i}>
-                                <img src={img} alt="atlantis kg"
-                                     style={{margin: "0 auto"}}
+                                <img src={img} alt="atlantis kg" style={{margin: "0 auto"}}
+                                     onClick={() => {setImageIndex(i); setOpen(true)}}
                                 />
                             </div>
 
@@ -113,6 +119,24 @@ const ArchitectureById = (props) => {
             }}>
                 <BackCall/>
             </div>
+
+            <div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={sliderImages[imageIndex]}
+                        nextSrc={sliderImages[(imageIndex+ 1) % sliderImages.length]}
+                        prevSrc={sliderImages[(imageIndex + sliderImages.length - 1) % sliderImages.length]}
+                        onCloseRequest={() => setOpen(false)}
+                        onMovePrevRequest={() =>
+                            setImageIndex((imageIndex + sliderImages.length - 1) % sliderImages.length)
+                        }
+                        onMoveNextRequest={() =>
+                            setImageIndex((imageIndex + 1) % sliderImages.length)
+                        }
+                    />
+                )}
+            </div>
+
         </>
     )
 }

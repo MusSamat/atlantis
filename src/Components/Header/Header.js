@@ -4,8 +4,12 @@ import "./_header.css"
 
 const Header = () => {
 
+    const styleOfPage = {
+        color: "#253B59"
+    }
     const activeLinkStyle = {
         color: "#679ED8",
+        // borderBottom: "1px solid black"
     }
     return (
         <>
@@ -20,29 +24,34 @@ const Header = () => {
             <div className="container">
 
                 <div className="headerN">
-                   <NavLink to="/" exact={true}>
-                       <div className="logo">
-                           <img src="/images/log.png" alt="atlantis kg" width={105} height={115}/>
-                       </div>
-                   </NavLink>
+                    <NavLink to="/" exact={true}>
+                        <div className="logo">
+                            <img src="/images/log.png" alt="atlantis kg" width={105} height={115}/>
+                        </div>
+                    </NavLink>
                     <div style={{
                         margin: "0 auto"
                     }}>
                         <ul className="menuList">
                             <NavLink to="/"
                                      exact={true}
+                                     style={{color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Главная</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/architecture"
+                                     exact
+                                     style={{color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Архитектура</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
                             <NavLink to="/building"
+                                     exact
+                                     style={{ color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Строительство</li>
@@ -50,6 +59,7 @@ const Header = () => {
                             <div className="vertical-line">|</div>
                             <NavLink to="/design"
                                      exact={true}
+                                     style={{ color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Дизайн</li>
@@ -57,6 +67,7 @@ const Header = () => {
                             <div className="vertical-line">|</div>
                             <NavLink to="/about"
                                      exact={true}
+                                     style={{ color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>О нас</li>
@@ -64,6 +75,7 @@ const Header = () => {
                             <div className="vertical-line">|</div>
                             <NavLink to="/contact"
                                      exact={true}
+                                     style={{ color: "#253B59"}}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Контакты</li>

@@ -10,6 +10,10 @@ import {toast} from "react-toastify";
 import "./../vr_image/_vr_image.css"
 import {NavLink} from "react-router-dom";
 import {setVrObject} from "../../store/actions/vrObject";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+
+
 
 
 const BuildingById = (props) => {
@@ -35,9 +39,16 @@ const BuildingById = (props) => {
         toast.success("Ссылка скопировано")
     }
 
+
+    // LightBox image carousel
+    const sliderImages = object?.images
+    const [isOpen, setOpen] = useState(false)
+    const [imageIndex, setImageIndex] = useState(0)
+
+
     useEffect(() => {
-        getArchitectureById()
         window.scrollTo(0, 0)
+        getArchitectureById()
     }, [])
     return (
 
@@ -77,7 +88,9 @@ const BuildingById = (props) => {
                         {
                             object?.images?.map((img, i) => (
                                 <div className="col-4 archImages" key={i}>
-                                    <img src={img} alt="atlantis kg" />
+                                    <img src={img} alt="atlantis kg"
+                                         onClick={() => {setImageIndex(i); setOpen(true)}}
+                                    />
                                 </div>
 
                             ))
@@ -105,7 +118,6 @@ const BuildingById = (props) => {
                                 : null
                         }
                     </div>
-
                 </div>
             </div>
 
@@ -117,7 +129,22 @@ const BuildingById = (props) => {
                 <BackCall/>
             </div>
 
-
+            <div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={sliderImages[imageIndex]}
+                        nextSrc={sliderImages[(imageIndex+ 1) % sliderImages.length]}
+                        prevSrc={sliderImages[(imageIndex + sliderImages.length - 1) % sliderImages.length]}
+                        onCloseRequest={() => setOpen(false)}
+                        onMovePrevRequest={() =>
+                            setImageIndex((imageIndex + sliderImages.length - 1) % sliderImages.length)
+                        }
+                        onMoveNextRequest={() =>
+                            setImageIndex((imageIndex + 1) % sliderImages.length)
+                        }
+                    />
+                )}
+            </div>
         </>
     )
 }

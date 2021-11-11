@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
 import {NavLink} from "react-router-dom";
 import {setVrObject} from "../../../store/actions/vrObject";
+import Lightbox from "react-image-lightbox";
 
 
 const DesignById = (props) => {
@@ -22,6 +23,11 @@ const DesignById = (props) => {
         })
     }
 
+
+    // LightBox image carousel
+    const [sliderImages, setSliderImages] = useState([])
+    const [isOpen, setOpen] = useState(false)
+    const [imageIndex, setImageIndex] = useState(0)
 
     useEffect(() => {
         getDesignById()
@@ -55,6 +61,7 @@ const DesignById = (props) => {
                                     <img
                                         src={img}
                                         alt="atlantis kg"
+                                        onClick={() => {setSliderImages(item.images);setImageIndex(i); setOpen(true); }}
                                     />
                                     {
                                         index === 0 ?
@@ -74,8 +81,6 @@ const DesignById = (props) => {
                                         <div className="col-4 designByIdDiv" >
                                             <NavLink to="/vr-image" key={i}>
                                             <div className="vrMainDiv" onClick={() => {
-                                                // setModalItem(item)
-                                                // dispatch(setOpenModal(true));
                                                 dispatch(setVrObject(item))
                                             }}>
                                                 {
@@ -103,6 +108,24 @@ const DesignById = (props) => {
                 }
             </div>
             <BackCall/>
+
+            <div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={sliderImages[imageIndex]}
+                        nextSrc={sliderImages[(imageIndex+ 1) % sliderImages.length]}
+                        prevSrc={sliderImages[(imageIndex + sliderImages.length - 1) % sliderImages.length]}
+                        onCloseRequest={() => setOpen(false)}
+                        onMovePrevRequest={() =>
+                            setImageIndex((imageIndex + sliderImages.length - 1) % sliderImages.length)
+                        }
+                        onMoveNextRequest={() =>
+                            setImageIndex((imageIndex + 1) % sliderImages.length)
+                        }
+                    />
+                )}
+            </div>
+
         </div>
     )
 }

@@ -9,7 +9,7 @@ const VrImage = (props) => {
     const dispatch = useDispatch()
     dispatch(setloading(false))
     const obj = useSelector(state => state.vrObject.vrObject)
-    console.log(obj)
+
     useEffect(() => {
         const panoImage = document.querySelector('.pano-image');
         const objectImage = obj?.vr
@@ -22,9 +22,6 @@ const VrImage = (props) => {
 
     return (
         <div className="page" >
-            <div>
-
-            </div>
             <div className="vrMainDiv" style={{width: 992, height: 638, margin: "0 auto", marginTop: 40}}>
                 <div className="pano-image" style={{width: "100%", height: "100%"}}></div>
             </div>
