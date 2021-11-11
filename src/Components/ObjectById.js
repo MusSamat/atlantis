@@ -47,9 +47,9 @@ const ObjectById = (props) => {
                     </div>
                     <div className=" col-lg-5 col-md- col-sm-12">
                         <div className="row">
-                            <div style={{
-                                paddingRight: 20,
-                                paddingLeft: 15
+                            <div className="col-5" style={{
+                                paddingRight: 8,
+                                paddingLeft: 8
                             }}>
                                 <div className="imgContainerMain">
                                     <img
@@ -70,23 +70,22 @@ const ObjectById = (props) => {
                                 />
                                 </div>
                             </div>
-                            <div className="col-6" style={{
-                                padding: 0
+                            <div className="col-7" style={{
+                                padding: "0 8px"
                             }}>
-                                <NavLink to={{
-                                    pathname: slug + "/" + object.id
-                                }}>
+
+                                <NavLink to={{pathname: slug + "/" + object.id}}>
                                     <div className="main_rightImageFirst">
                                         <img src={object.image5} alt="atlantis"/>
                                     </div>
                                 </NavLink>
-                                <NavLink to={{
-                                    pathname: slug + "/" + object.id
-                                }}>
+
+                                <NavLink to={{pathname: slug + "/" + object.id}}>
                                     <div className="main_rightImageSecond">
                                         <img src={object.image6} alt="atlantis"/>
                                     </div>
                                 </NavLink>
+
                             </div>
                         </div>
                     </div>

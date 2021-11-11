@@ -8,6 +8,7 @@ import fetch_design1 from "./design1_reducer";
 import fetch_design2 from "./design2_reducer";
 import fetch_buildingItems from "./buildingSectionReducer";
 import vrObjectReducer from "./vrObject_reducer";
+import light_slider_reducer from "./light_slider_reducer";
 
 export default combineReducers({
     load: loadreducer,
@@ -18,5 +19,6 @@ export default combineReducers({
     design1: fetch_design1,
     design2: fetch_design2,
     buildingItems: fetch_buildingItems,
-    vrObject: vrObjectReducer
+    vrObject: vrObjectReducer,
+    light_slider: light_slider_reducer
 })

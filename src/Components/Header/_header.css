@@ -34,9 +34,11 @@
     color: #253B59;
     gap: 20px;
 }
-.headerN ul > li{
-    color: #253B59 !important;
+
+.headerN ul li{
+    /*color: #253B59;*/
 }
+
 .vertical-line{
     color: #878a88;
     opacity: 0.9;
