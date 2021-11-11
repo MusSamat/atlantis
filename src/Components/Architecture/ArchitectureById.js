@@ -83,9 +83,7 @@ const ArchitectureById = (props) => {
                         object?.images?.map((img, i) => (
                             <div className="col-4 archImages" key={i}>
                                 <img src={img} alt="atlantis kg" style={{margin: "0 auto"}}
-                                     onClick={() => {setImageIndex(i); setOpen(true)
-                                        console.log("must show fullscreen")
-                                     }}
+                                     onClick={() => {setImageIndex(i); setOpen(true)}}
                                 />
                             </div>
 
