@@ -5,11 +5,6 @@
       <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/Contact/Location.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal/ModalVr.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
@@ -30,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
