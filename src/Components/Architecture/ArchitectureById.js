@@ -67,7 +67,7 @@ const ArchitectureById = (props) => {
                     </div>
                 </div>
                 <div className="row" style={{
-                    marginTop: 24
+                    marginTop: 24,
                 }}>
                     <div className="col-12">
                         {
