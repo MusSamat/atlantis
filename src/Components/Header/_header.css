@@ -31,7 +31,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
-    color: #253B59;
+    color: #253B59 !important;
     gap: 20px;
 }
 .headerN ul > li{

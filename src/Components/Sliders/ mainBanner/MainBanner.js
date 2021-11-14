@@ -20,11 +20,11 @@ export default function MainBanner() {
         new AccessWithBack().getData("/api/main").then(res => {
             dispatch(setloading(false))
             setObject(res)
-            if(res.category === 1){
+            if (res.category === 1) {
                 setSlug("architectureById")
-            }else if(res.category === 2 ){
+            } else if (res.category === 2) {
                 setSlug("buildingById")
-            }else{
+            } else {
                 setSlug("designById")
             }
             setImages(res.images)
@@ -42,16 +42,16 @@ export default function MainBanner() {
             <div className="page" style={{
                 marginTop: 100
             }}>
-                <div className="row" >
+                <div className="row">
                     <div className="mainBanner">
                         {
                             images?.filter((img, i) => i < 1 ? img : null).map((image, i) => (
                                 <NavLink
                                     key={i}
                                     to={{
-                                    pathname: slug + "/" + object.id
-                                }}>
-                                    <img src={selectedImg ?  selectedImg : image} alt="atlantis kg"
+                                        pathname: slug + "/" + object.id
+                                    }}>
+                                    <img src={selectedImg ? selectedImg : image} alt="atlantis kg"
                                          title="Посмотреть"/>
                                 </NavLink>
                             ))
@@ -71,7 +71,7 @@ export default function MainBanner() {
                                 <div className="imgContainerMain">
                                     {images?.filter((img, i) => i < 3 ? img : null).map((img, index) => (
                                         <img
-                                            style={{ border: selectedImg === img ? "1px solid purple" : "" }}
+                                            style={{border: selectedImg === img ? "1px solid purple" : ""}}
                                             key={index}
                                             src={img}
                                             alt="atlantis kg"
@@ -83,23 +83,29 @@ export default function MainBanner() {
                             <div className="col-6" style={{
                                 padding: 0
                             }}>
-                                <div className="main_rightImageFirst">
-                                    {
-                                        images?.filter((img, i) => i === 1 ? img : null).map((img, i) => (
-                                            <img src={img} alt="atlantis"
-                                            key={i}/>
-                                        ))
-                                    }
-                                </div>
-                                <div className="main_rightImageSecond">
-                                    {
-                                        images?.filter((img, i) => i === 2 ? img : null).map((img, i) => (
-                                            <img src={img} alt="atlantis"
-                                                key={i}
-                                            />
-                                        ))
-                                    }
-                                </div>
+
+                                <NavLink to={{pathname: slug + "/" + object.id}}>
+                                    <div className="main_rightImageFirst">
+                                        {
+                                            images?.filter((img, i) => i === 1 ? img : null).map((img, i) => (
+                                                <img src={img} alt="atlantis"
+                                                     key={i}/>
+                                            ))
+                                        }
+                                    </div>
+                                </NavLink>
+
+                                <NavLink to={{pathname: slug + "/" + object.id}}>
+                                    <div className="main_rightImageSecond">
+                                        {
+                                            images?.filter((img, i) => i === 2 ? img : null).map((img, i) => (
+                                                <img src={img} alt="atlantis"
+                                                     key={i}
+                                                />
+                                            ))
+                                        }
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
                     </div>

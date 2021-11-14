@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import BackCall from "../BackCall/BackCall";
 import {setloading} from "../../store/actions/laod_action";
 import AccessWithBack from "../../service/AccessWithBack";
@@ -10,6 +12,7 @@ import {toast} from "react-toastify";
 import "./../vr_image/_vr_image.css"
 import {NavLink} from "react-router-dom";
 import {setVrObject} from "../../store/actions/vrObject";
+
 
 
 const BuildingById = (props) => {
@@ -34,6 +37,11 @@ const BuildingById = (props) => {
         document.body.removeChild(el);
         toast.success("Ссылка скопировано")
     }
+
+    const sliderImages = object?.images
+    const [isOpen, setOpen] = useState(false)
+    const [imageIndex, setImageIndex] = useState(0)
+
 
     useEffect(() => {
         getArchitectureById()
@@ -77,7 +85,9 @@ const BuildingById = (props) => {
                         {
                             object?.images?.map((img, i) => (
                                 <div className="col-4 archImages" key={i}>
-                                    <img src={img} alt="atlantis kg" />
+                                    <img src={img} alt="atlantis kg"
+                                         onClick={() => {setImageIndex(i); setOpen(true)}}
+                                    />
                                 </div>
 
                             ))
@@ -109,6 +119,22 @@ const BuildingById = (props) => {
                 </div>
             </div>
 
+            <div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={sliderImages[imageIndex]}
+                        nextSrc={sliderImages[(imageIndex+ 1) % sliderImages.length]}
+                        prevSrc={sliderImages[(imageIndex + sliderImages.length - 1) % sliderImages.length]}
+                        onCloseRequest={() => setOpen(false)}
+                        onMovePrevRequest={() =>
+                            setImageIndex((imageIndex + sliderImages.length - 1) % sliderImages.length)
+                        }
+                        onMoveNextRequest={() =>
+                            setImageIndex((imageIndex + 1) % sliderImages.length)
+                        }
+                    />
+                )}
+            </div>
 
             <div style={{
                 marginTop: 120

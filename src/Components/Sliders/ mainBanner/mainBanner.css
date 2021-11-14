@@ -48,8 +48,8 @@ img {
 .mainBanner .objectTitle{
     position: absolute;
     left: 0;
-    top: 333px;
-    min-width: 330px;
+    top: 330px;
+    min-width: 370px;
     height: 49px;
     background-color: rgba(255,255,255, 0.62);
     padding: 10px;

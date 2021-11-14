@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5e70a80-d10a-4def-a780-6419b034471a" name="Changes" comment="">
+    <list default="true" id="c5e70a80-d10a-4def-a780-6419b034471a" name="Changes" comment="changed build second">
+      <change afterPath="$PROJECT_DIR$/src/store/actions/handle_light_slider_action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer/light_slider_reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../legprom_kg/public/images/png/fas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../legprom_kg/public/images/png/participants.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/Contact/Location.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/b2b/Participants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -10,7 +15,14 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Building/BuildingById.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Modal/ModalVr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/_header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/_header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/mainBanner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
@@ -78,7 +90,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb07bde-7f0b-4094-a93f-58c85a71aaca" name="Default Changelist" comment="" />
+      <changelist id="c5e70a80-d10a-4def-a780-6419b034471a" name="Changes" comment="changed build second" />
       <created>1625716256178</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -101,6 +113,8 @@
       <workItem from="1635911299279" duration="1912000" />
       <workItem from="1635960462975" duration="367000" />
       <workItem from="1636368681143" duration="19062000" />
+      <workItem from="1636694709302" duration="3919000" />
+      <workItem from="1636882635425" duration="6637000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>

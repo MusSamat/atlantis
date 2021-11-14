@@ -25,7 +25,7 @@ const VrImage = (props) => {
             <div>
 
             </div>
-            <div className="vrMainDiv" style={{width: 992, height: 638, margin: "0 auto", marginTop: 40}}>
+            <div className="vrMainDiv" style={{width: 992, height: 638, margin: "0 auto", marginTop: 70}}>
                 <div className="pano-image" style={{width: "100%", height: "100%"}}></div>
             </div>
         </div>
