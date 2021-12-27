@@ -1,8 +1,7 @@
 import React from "react";
-import {Router} from "react-router";
 import {useSelector} from "react-redux";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {ToastContainer, toast} from "react-toastify";
+import {ToastContainer,} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";

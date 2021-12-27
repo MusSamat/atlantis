@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./backCall.css"
 import PhoneInput from "react-phone-input-2";
 import AccessWithBack from "../../service/AccessWithBack";
@@ -9,6 +9,7 @@ const BackCallModal = () => {
     const [showModal, setShowModal] = useState(false)
     const [name, setName] = useState(null)
     const [phoneNumber, setPhoneNumber] = useState()
+    const [showError, setShowError] = useState(false)
 
     const setCallBack = () => {
         if( name !== null && phoneNumber.length > 11){
@@ -19,14 +20,30 @@ const BackCallModal = () => {
                 }
             )
             new AccessWithBack().setData("/api/backcall/", body).then(() => {
-                document.getElementById('nameInput').value=" "
+                // document.getElementById('nameInput').value=" "
+                document.getElementById('nameInput').style.border = "1px solid #253B59"
                 setPhoneNumber(null)
+                setShowError(false)
                 toast.success("Ваша команда успешно выполнено!")
             })
         }else{
             toast.error("Проверьте в правильности")
+            document.getElementById('nameInput').style.border = "1px solid red"
+            setShowError(true)
+            timeOver()
         }
     }
+
+    function timeOver() {
+        if(showError){
+            setTimeout(() => {
+                setShowError(false)
+            }, 4000)
+        }
+    }
+
+    useEffect(() => {
+    }, [])
 
     return (
         <>
@@ -55,15 +72,28 @@ const BackCallModal = () => {
                         </div>
                         <div>
                             <div className="modalInputs">
-                                <input type="text"
-                                       style={{
-                                           paddingLeft: 10,
-                                           fontSize: 16
-                                       }}
-                                       id="nameInput"
-                                       placeholder="Ваше Имя"
-                                       onChange={(e) => setName(e.target.value)}
-                                />
+                                <div style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+
+                                }}>
+                                    <input type="text"
+                                           style={{
+                                               paddingLeft: 10,
+                                               fontSize: 16
+                                           }}
+                                           id="nameInput"
+                                           placeholder="Ваше имя"
+                                           onChange={(e) => setName(e.target.value)}
+                                    />
+                                    {
+                                        showError ?
+                                            <div className="errorInfo">
+                                                Ошибка! Поля обязательные для заполнения.
+                                            </div>
+                                            : null
+                                    }
+                                </div>
                                 <div style={{
                                     width: "100%"
                                 }}>

@@ -113,7 +113,7 @@ const ArchitectureSection = () => {
                         }}>
                             {objects?.filter((item, i) => item.id !== object?.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
-                                    <NavLink to={{pathname: "/architectureById/" + item?.id}}>
+                                    <NavLink to={{pathname: "/architectureById/" + item?.id}} key={index}>
                                         <div className="imageTitle"
                                              key={index}
                                              title={item.title}
@@ -123,7 +123,7 @@ const ArchitectureSection = () => {
                                         >{item.title.substring(0, 40)}...
                                         </div>
                                     </NavLink>
-                                    <div className="imgContainerLeftSide">
+                                    <div className="imgContainerLeftSide" key={"ler" + index}>
                                         <img
                                             src={item?.images[0]}
                                             alt="atlantis kg"
@@ -205,7 +205,7 @@ const ArchitectureSection = () => {
                                 }}>
                                     {objects?.filter((item, i) => item.id !== object2?.id && i > 3 ? item : null).map((item, index) => (
                                         <>
-                                            <NavLink to={{pathname: "/architectureById/" + item?.id}}>
+                                            <NavLink to={{pathname: "/architectureById/" + item?.id}} key={index}>
                                                 <div className="imageTitle"
                                                      key={index}
                                                      title={item.title}
@@ -215,7 +215,7 @@ const ArchitectureSection = () => {
                                                 >{item.title.substring(0, 40)}...
                                                 </div>
                                             </NavLink>
-                                            <div className="imgContainerLeftSide">
+                                            <div className="imgContainerLeftSide" key={"ler" + index}>
                                                 <img
                                                     src={item?.images[0]}
                                                     alt="atlantis kg"

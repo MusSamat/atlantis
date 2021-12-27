@@ -7,11 +7,21 @@ import AccessWithBack from "../../service/AccessWithBack";
 
 
 const BackCall = () => {
-    const [name, setName] = useState()
-    const [phoneNumber, setPhoneNumber] = useState()
+    const [name, setName] = useState(null)
+    const [phoneNumber, setPhoneNumber] = useState(null)
+    const [showError, setShowError] = useState(false)
+
+
+    function timeOver() {
+        if(showError){
+            setTimeout(() => {
+                setShowError(false)
+            }, 4000)
+        }
+    }
 
     const setCallBack = () => {
-        if( name !== null && phoneNumber.length > 11){
+        if (name !== null && phoneNumber.length > 11) {
             let body = JSON.stringify(
                 {
                     name: name,
@@ -19,14 +29,21 @@ const BackCall = () => {
                 }
             )
             new AccessWithBack().setData("/api/backcall/", body).then(() => {
-                document.getElementById('nameInput').value=" "
+                document.getElementById('nameInput').value = " "
+                document.getElementById('nameInput').style.border = "1px solid #253B59"
                 setPhoneNumber(null)
+                setName(null)
+                setShowError(false)
                 toast.success("Ваша команда успешно выполнено!")
             })
-        }else{
+        } else {
             toast.error("Проверьте в правильности")
+            document.getElementById('nameInput').style.border = "1px solid red"
+            setShowError(true)
+            timeOver()
         }
     }
+
     return (
         <div className='page'>
             <div>
@@ -37,25 +54,38 @@ const BackCall = () => {
                 >
                     <div className="backCallBtn">
                         <button style={{
-                            textAlign:"center",
+                            textAlign: "center",
                             paddingBottom: 66,
                         }}
-                            onClick={() => setCallBack(name, phoneNumber)}
+                                onClick={() => setCallBack(name, phoneNumber)}
                         >
                             Заказать звонок
                         </button>
                     </div>
                     <div className="backCallInputs">
-                        <input type="text"
-                               style={{
-                                   paddingLeft: 40,
-                                   fontSize: 25
-                               }}
-                               id="nameInput"
-                               placeholder="Ваше Имя"
-                               onChange={(e) =>setName(e.target.value)}
+                        <div style={{
+                            display: "flex",
+                            flexDirection: "column",
 
-                        />
+                        }}>
+                            <input type="text"
+                                   style={{
+                                       paddingLeft: 40,
+                                       fontSize: 25
+                                   }}
+                                   id="nameInput"
+                                   placeholder="Ваше имя"
+                                   onChange={(e) => setName(e.target.value)}
+
+                            />
+                            {
+                                showError ?
+                                    <div className="errorInfo">
+                                        Ошибка! Поля обязательные для заполнения.
+                                    </div>
+                                    : null
+                            }
+                        </div>
                         <div style={{
                             width: 450
                         }}>

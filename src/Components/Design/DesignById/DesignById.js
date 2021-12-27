@@ -14,19 +14,34 @@ const DesignById = (props) => {
 
     const id = parseInt(props.match.params.id)
     const [object, setObject] = useState([])
+    const [objImages, setObjectImages] = useState([])
     const dispatch = useDispatch()
     const getDesignById = () => {
         dispatch(setloading(true))
         new AccessWithBack().getData("/api/design/" + id).then(res => {
             dispatch(setloading(false))
             setObject(res)
+            const a = []
+            if (res.images) {
+                res.images.map((item, i) => {
+                    if (item.images) {
+                        item.images.map(image => {
+                            a.push({
+                                name: item.name,
+                                image: image,
+                                vr: item.vr
+                            })
+                        })
+                    }
+                })
+            }
+            setObjectImages(a)
         })
     }
 
 
+
     // LightBox image carousel
-    const [sliderImages, setSliderImages] = useState([])
-    const [imageTitle, setImageTitle] = useState(null)
     const [isOpen, setOpen] = useState(false)
     const [imageIndex, setImageIndex] = useState(0)
 
@@ -51,64 +66,55 @@ const DesignById = (props) => {
                 {object.title}
             </div>
             <div className="row">
+
                 {
-                    object?.images?.map((item, i) => (
+                    objImages?.map((item, i) => (
                         <>
-                            {item?.images.map((img, index) => (
-                                <div className="col-4 designByIdDiv"
-                                     key={index}
-                                >
-
-                                    <img
-                                        src={img}
-                                        alt="atlantis kg"
-                                        onClick={() => {
-                                            setSliderImages(item.images);
-                                            setImageIndex(i);
-                                            setImageTitle(item.name);
-                                            setOpen(true); }}
-                                    />
-                                    {
-                                        index === 0 ?
-                                            <div className="objectTitle">
-                                                <p>
-                                                    {item.name}
-                                                </p>
-                                            </div> :
-                                            null
-                                    }
+                            <div className="col-4 designByIdDiv" key={i}>
+                                <img
+                                    src={item.image}
+                                    alt="atlantis kg"
+                                    onClick={() => {
+                                        // setSliderImages(item.images);
+                                        setImageIndex(i);
+                                        // setImageTitle(item.name);
+                                        setOpen(true);
+                                    }}
+                                />
+                                <div className="objectTitle" style={{opacity: 0.8}}>
+                                    <p>
+                                        {item.name}
+                                    </p>
                                 </div>
-
-                            ))}
-
+                            </div>
                             {
-                                item?.vr ?
-                                    <div className="col-4 designByIdDiv" >
-                                        <NavLink to="/vr-image" key={i}>
-                                            <div className="vrMainDiv" onClick={() => {
-                                                dispatch(setVrObject(item))
-                                            }}>
-                                                {
-                                                    item.images?.filter((items, i) => i === 0 ? items : null).map(items => (
-                                                            <img src={items} alt="atlantis kg"
-                                                                 className="vrMainImage"
-                                                                 style={{margin: "0 auto"}}
-                                                            />
-                                                        )
-                                                    )
-
-                                                }
-                                                <div className="vr_div">
-                                                    <p>VR</p>
+                                objImages[i+1]?.name !== item.name ?
+                                    item.vr ?
+                                        <div className="col-4 designByIdDiv" >
+                                            <NavLink to="/vr-image" >
+                                                <div className="vrMainDiv" onClick={() => {
+                                                    dispatch(setVrObject(item))
+                                                }}>
+                                                    <img src={item.image} alt="atlantis kg"
+                                                         className="vrMainImage"
+                                                         style={{margin: "0 auto"}}
+                                                    />
+                                                    <div className="vr_div">
+                                                        <p>VR</p>
+                                                    </div>
                                                 </div>
-                                            </div>       </NavLink>
-                                    </div>
-
-
-                                    : null
+                                                {/*<div className="objectTitle" style={{opacity: 0.6}}>*/}
+                                                {/*    <p>*/}
+                                                {/*        {item.name}*/}
+                                                {/*    </p>*/}
+                                                {/*</div>*/}
+                                            </NavLink>
+                                        </div>
+                                        : null
+                                    :
+                                    null
                             }
                         </>
-
                     ))
                 }
             </div>
@@ -117,17 +123,17 @@ const DesignById = (props) => {
             <div>
                 {isOpen && (
                     <Lightbox
-                        mainSrc={sliderImages[imageIndex]}
-                        nextSrc={sliderImages[(imageIndex+ 1) % sliderImages.length]}
-                        prevSrc={sliderImages[(imageIndex + sliderImages.length - 1) % sliderImages.length]}
+                        mainSrc={objImages[imageIndex].image}
+                        nextSrc={objImages[(imageIndex + 1) % objImages.length].image}
+                        prevSrc={objImages[(imageIndex + objImages.length - 1) % objImages.length].image}
                         onCloseRequest={() => setOpen(false)}
                         onMovePrevRequest={() =>
-                            setImageIndex((imageIndex + sliderImages.length - 1) % sliderImages.length)
+                            setImageIndex((imageIndex + objImages.length - 1) % objImages.length)
                         }
                         onMoveNextRequest={() =>
-                            setImageIndex((imageIndex + 1) % sliderImages.length)
+                            setImageIndex((imageIndex + 1) % objImages.length)
                         }
-                        imageTitle={imageTitle}
+                        imageTitle={objImages[imageIndex].name}
                         imagePadding={50}
                     />
                 )}

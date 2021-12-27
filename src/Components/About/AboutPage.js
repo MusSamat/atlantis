@@ -8,6 +8,7 @@ import {setloading} from "../../store/actions/laod_action";
 const AboutPage = () => {
     const [description, setDescription] = useState([])
     const dispatch = useDispatch()
+
     const getAboutDescription = () => {
         dispatch(setloading(true))
         new AccessWithBack().getData("/api/about").then(res => {
@@ -17,8 +18,8 @@ const AboutPage = () => {
     }
 
     useEffect(() => {
-        getAboutDescription()
         window.scrollTo(0, 0)
+        getAboutDescription()
     }, [])
     return (
         <>

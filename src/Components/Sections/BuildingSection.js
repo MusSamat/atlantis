@@ -97,7 +97,7 @@ const BuildingSection = () => {
                         }}>
                             {objects?.filter((item, i) => item.id !== object?.id && i <= 3 ? item : null).map((item, index) => (
                                 <>
-                                    <NavLink to={{pathname: "/buildingById/" + item?.id}}>
+                                    <NavLink to={{pathname: "/buildingById/" + item?.id}} key={index}>
                                         <div className="imageTitle"
                                              key={index}
                                              title={item.title}
@@ -188,7 +188,7 @@ const BuildingSection = () => {
                                 }}>
                                     {objects?.filter((item, i) => item.id !== object2?.id && i > 3 ? item : null).map((item, index) => (
                                         <>
-                                            <NavLink to={{pathname: "/buildingById/" + item?.id}}>
+                                            <NavLink to={{pathname: "/buildingById/" + item?.id}} key={index}>
                                                 <div className="imageTitle"
                                                      key={index}
                                                      title={item.title}
