@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e70a80-d10a-4def-a780-6419b034471a" name="Changes" comment="changed build second">
-      <change afterPath="$PROJECT_DIR$/../legprom_kg/public/images/png/fas.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../legprom_kg/public/images/png/participants.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/Contact/Location.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/b2b/Participants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Inputs /Checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Inputs /inputs.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/BackCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/BackCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/BackCallModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/BackCall/backCall.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/BackCall/backCall.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
@@ -40,6 +37,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1v14RqraaYw5Jr1uadQqgfBg9Xb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -104,6 +104,7 @@
       <workItem from="1636368681143" duration="19062000" />
       <workItem from="1636694709302" duration="3919000" />
       <workItem from="1636882635425" duration="10946000" />
+      <workItem from="1640582223154" duration="9367000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>
@@ -184,7 +185,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
