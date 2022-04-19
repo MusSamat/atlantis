@@ -84,7 +84,7 @@ export default function MainBanner() {
                                 padding: 0
                             }}>
 
-                                <NavLink to={{pathname: slug + "/" + object.id}}>
+                                <NavLink to={{pathname: slug + "/" + object?.id}}>
                                     <div className="main_rightImageFirst">
                                         {
                                             images?.filter((img, i) => i === 1 ? img : null).map((img, i) => (
@@ -95,7 +95,7 @@ export default function MainBanner() {
                                     </div>
                                 </NavLink>
 
-                                <NavLink to={{pathname: slug + "/" + object.id}}>
+                                <NavLink to={{pathname: slug + "/" + object?.id}}>
                                     <div className="main_rightImageSecond">
                                         {
                                             images?.filter((img, i) => i === 2 ? img : null).map((img, i) => (

@@ -47,11 +47,11 @@ const ArchitectureById = (props) => {
         <>
             <div className="page">
                 <div className="ArchitectureTitle">
-                    {object.title}
+                    {object?.title}
                 </div>
 
                 <div className="description">
-                    {object.description}</div>
+                    {object?.description}</div>
                 <div className="copyDiv">
                     <ObjectInfo
                         location={object?.address}

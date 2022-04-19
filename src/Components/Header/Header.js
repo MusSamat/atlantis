@@ -1,6 +1,8 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import "./_header.css"
+import {ArchUrl, BuildUrl, MainUrl, DesignUrl, ContactUrl, AboutUrl} from "../urls/constants";
+import Architecture from "../Architecture/Architecture";
 
 const Header = () => {
 
@@ -20,49 +22,49 @@ const Header = () => {
             <div className="container">
 
                 <div className="headerN">
-                   <NavLink to="/" exact={true}>
-                       <div className="logo">
-                           <img src="/images/log.png" alt="atlantis kg" width={105} height={115}/>
-                       </div>
-                   </NavLink>
+                    <NavLink to={MainUrl} exact={true}>
+                        <div className="logo">
+                            <img src="/images/log.png" alt="atlantis kg" width={105} height={115}/>
+                        </div>
+                    </NavLink>
                     <div style={{
                         margin: "0 auto"
                     }}>
                         <ul className="menuList">
-                            <NavLink to="/"
+                            <NavLink to={MainUrl}
                                      exact={true}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Главная</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
-                            <NavLink to="/architecture"
+                            <NavLink to={ArchUrl}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Архитектура</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
-                            <NavLink to="/building"
+                            <NavLink to={BuildUrl}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Строительство</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
-                            <NavLink to="/design"
+                            <NavLink to={DesignUrl}
                                      exact={true}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>Дизайн</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
-                            <NavLink to="/about"
+                            <NavLink to={AboutUrl}
                                      exact={true}
                                      activeStyle={activeLinkStyle}
                             >
                                 <li>О нас</li>
                             </NavLink>
                             <div className="vertical-line">|</div>
-                            <NavLink to="/contact"
+                            <NavLink to={ContactUrl}
                                      exact={true}
                                      activeStyle={activeLinkStyle}
                             >

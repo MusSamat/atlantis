@@ -5,9 +5,12 @@ import BackCall from "../../BackCall/BackCall";
 import AccessWithBack from "../../../service/AccessWithBack";
 import {useDispatch, useSelector} from "react-redux";
 import {setloading} from "../../../store/actions/laod_action";
-import {NavLink} from "react-router-dom";
 import {setVrObject} from "../../../store/actions/vrObject";
 import Lightbox from "react-image-lightbox";
+import {NavLink} from "react-router-dom";
+
+
+
 
 
 const DesignById = (props) => {
@@ -48,7 +51,6 @@ const DesignById = (props) => {
     useEffect(() => {
         getDesignById()
         window.scrollTo(0, 0)
-
     }, [])
 
     return (
@@ -101,6 +103,7 @@ const DesignById = (props) => {
                                                     />
                                                     <div className="vr_div">
                                                         <p>VR</p>
+
                                                     </div>
                                                 </div>
                                                 {/*<div className="objectTitle" style={{opacity: 0.6}}>*/}
@@ -138,7 +141,6 @@ const DesignById = (props) => {
                     />
                 )}
             </div>
-
         </div>
     )
 }

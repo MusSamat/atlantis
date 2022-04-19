@@ -3,7 +3,7 @@ class AccessWithBack extends React.Component{
 
     constructor() {
         super();
-        this._apiBase = 'http://46.101.170.185:8888'
+        this._apiBase = 'https://admin.atlantis.ink'
     }
 
     async getData(url) {
@@ -14,6 +14,16 @@ class AccessWithBack extends React.Component{
 
         return res.json()
     }
+    //
+    // async getDataImage() {
+    //
+    //     const res  = await fetch(`https://admin.simastore.ru/api/sertificate/`, {
+    //         method: "GET"
+    //     })
+    //
+    //     return res.json()
+    // }
+
 
     async setData(url, body){
         const res = await fetch(`${this._apiBase}${url}`, {
@@ -25,6 +35,7 @@ class AccessWithBack extends React.Component{
         })
         return res.json()
     }
+
 }
 
 export default AccessWithBack

@@ -2,13 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e70a80-d10a-4def-a780-6419b034471a" name="Changes" comment="changed build second">
+      <change afterPath="$PROJECT_DIR$/src/Components/urls/constants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/vr_image/Pano.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Menu/Menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Menu/MobileMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Menu/_menuCss.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../legprom_kg/public/images/png/participants.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/Contact/Location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../legprom_kg/src/Components/Pages/b2b/Participants.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Inputs /Checkbox.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-redux-course/src/components/Inputs /inputs.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Stellar" beforeDir="false" afterPath="$PROJECT_DIR$/../Stellar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../agro-vet-asia" beforeDir="false" afterPath="$PROJECT_DIR$/../agro-vet-asia" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Architecture/ArchitectureById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Design/DesignById/DesignById.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sliders/ mainBanner/MainBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/vr_image/VrImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/AccessWithBack.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/AccessWithBack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../current" beforeDir="false" afterPath="$PROJECT_DIR$/../current" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hydroponic-system" beforeDir="false" afterPath="$PROJECT_DIR$/../hydroponic-system" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../online-store" beforeDir="false" afterPath="$PROJECT_DIR$/../online-store" afterDir="false" />
@@ -21,9 +36,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,19 +62,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../redux-course-2020" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/msamat/snap/webstorm/atlantis",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.customizations",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/images" />
@@ -105,6 +119,16 @@
       <workItem from="1636694709302" duration="3919000" />
       <workItem from="1636882635425" duration="10946000" />
       <workItem from="1640582223154" duration="9367000" />
+      <workItem from="1642136279448" duration="2055000" />
+      <workItem from="1642152478846" duration="878000" />
+      <workItem from="1642157910712" duration="4805000" />
+      <workItem from="1642486613503" duration="12917000" />
+      <workItem from="1643969512722" duration="4573000" />
+      <workItem from="1646283896094" duration="232000" />
+      <workItem from="1650263314090" duration="5919000" />
+      <workItem from="1650271329057" duration="161000" />
+      <workItem from="1650271547871" duration="55000" />
+      <workItem from="1650271651544" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1627017092758</created>

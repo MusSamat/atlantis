@@ -17,31 +17,32 @@ import ArchitectureById from "./Components/Architecture/ArchitectureById";
 import BuildingById from "./Components/Building/BuildingById";
 import {FullPageLoader} from "./Loader/FullPageLoader";
 import VrImage from "./Components/vr_image/VrImage";
+import {
+    AboutUrl,
+    ArchByIDUrl,
+    ArchUrl,
+    BuildByIDUrl,
+    BuildUrl,
+    ContactUrl,
+    DesignByIDUrl, DesignUrl,
+    MainUrl, urls, VrImageUrl
+} from "./Components/urls/constants";
+import Menu from "./Menu/Menu";
+import MobileMenu from "./Menu/MobileMenu";
+
 function App() {
-
     const load = useSelector(state => state.load.load)
-  return (
-    <BrowserRouter>
-
-        <ToastContainer/>
-        <Header/>
-        <BackCallModal/>
-        <Switch>
-            <Route exact={true} path={"/"} component={Main}/>
-            <Route exact={true} path={"/contact"} component={Contact}/>
-            <Route exact={true} path={"/about"} component={AboutPage}/>
-            <Route exact={true} path={"/architecture"} component={Architecture}/>
-            <Route exact={true} path={"/building"} component={Building}/>
-            <Route exact={true} path={"/design"} component={Design}/>
-            <Route exact={true} path={"/designById/:id"} component={DesignById}/>
-            <Route exact={true} path={"/architectureById/:id"} component={ArchitectureById}/>
-            <Route exact={true} path={"/buildingById/:id"} component={BuildingById}/>
-            <Route exact={true} path={"/vr-image"} component={VrImage}/>
-        </Switch>
-        <Footer/>
-        {load ? <FullPageLoader/> : null}
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            {/*<MobileMenu/>*/}
+            <ToastContainer/>
+            <Header/>
+            <BackCallModal/>
+            <Menu/>
+            <Footer/>
+            {load ? <FullPageLoader/> : null}
+        </BrowserRouter>
+    );
 }
 
 export default App;
